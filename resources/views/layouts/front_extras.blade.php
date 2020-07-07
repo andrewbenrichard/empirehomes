@@ -1,4 +1,4 @@
-<script src="/js/front_app.js"></script>
+<script src="public/js/front_app.js"></script>
 	<!--jQuery Plugin -->
 	<script src="public/assets/front/js/jquery-3.4.1.min.js"></script>
 	<!-- Bootstrap JS -->
@@ -22,6 +22,6 @@
 	<script src="public/assets/front/js/countdown.js"></script>
 	<!-- Fancybox Js-->
 	<script src="public/assets/front/js/jquery.fancybox.min.js"></script>
-	<script src='../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<!-- Main Script -->
 	<script src="public/assets/front/js/theme.js"></script>

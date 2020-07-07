@@ -45,7 +45,7 @@
 
 
  {{-- vue styles--}}
- <link href="{{ asset('css/front_app.css') }}" rel="stylesheet">
+ <link href="{{ asset('public/css/front_app.css') }}" rel="stylesheet">
 
 
  <!-- CSRF Token -->

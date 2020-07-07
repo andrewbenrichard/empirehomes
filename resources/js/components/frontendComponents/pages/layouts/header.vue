@@ -7,7 +7,7 @@
           <div class="col-4 col-md-4">
             <div class="logo-wrapper">
               <router-link to="/">
-                <img src="assets/front/img/logo.png" alt />
+                <img src="public/assets/front/img/logo.png" alt />
               </router-link>
             </div>
           </div>
@@ -65,7 +65,7 @@
         </div>
         <div class="sp-logo">
           <router-link to="/">
-            <img src="assets/img/logo-2.png" alt />
+            <img src="public/assets/img/logo-2.png" alt />
           </router-link>
         </div>
 

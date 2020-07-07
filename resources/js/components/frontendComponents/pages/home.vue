@@ -27,7 +27,7 @@
                     data-sloop="s:4000;e:9000;"
                   >
                     <img
-                      src="public/assets/front/sliders/slider-1/public/assets/slide2-1.jpg"
+                      src="public/assets/front/sliders/slider-1/assets/slide2-1.jpg"
                       title="slide2"
                       width="1344"
                       height="537"
@@ -196,7 +196,7 @@
                     data-sloop="s:4000;e:9000;"
                   >
                     <img
-                      src="public/assets/front/sliders/slider-1/public/assets/slide1-2.jpg"
+                      src="public/assets/front/sliders/slider-1/assets/slide1-2.jpg"
                       title="slide1"
                       width="1170"
                       height="550"
@@ -381,7 +381,7 @@
                     data-sloop="s:4000;e:9000;"
                   >
                     <img
-                      src="public/assets/front/sliders/slider-1/public/assets/slide4.jpg"
+                      src="public/assets/front/sliders/slider-1/assets/slide4.jpg"
                       title="slide4"
                       width="1295"
                       height="978"

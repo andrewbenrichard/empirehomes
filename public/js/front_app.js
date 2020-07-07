@@ -43425,7 +43425,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/public/assets/slide2-1.jpg",
+                                      "public/assets/front/sliders/slider-1/assets/slide2-1.jpg",
                                     title: "slide2",
                                     width: "1344",
                                     height: "537",
@@ -43682,7 +43682,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/public/assets/slide1-2.jpg",
+                                      "public/assets/front/sliders/slider-1/assets/slide1-2.jpg",
                                     title: "slide1",
                                     width: "1170",
                                     height: "550",
@@ -43942,7 +43942,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/public/assets/slide4.jpg",
+                                      "public/assets/front/sliders/slider-1/assets/slide4.jpg",
                                     title: "slide4",
                                     width: "1295",
                                     height: "978",

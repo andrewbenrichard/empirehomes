@@ -64057,7 +64057,7 @@ _store__WEBPACK_IMPORTED_MODULE_0__["default"].subscribe(function (mutation) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\personal growth\empirehomes\resources\js\front_app.js */"./resources/js/front_app.js");
+module.exports = __webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\vue projects\empirehomes\resources\js\front_app.js */"./resources/js/front_app.js");
 
 
 /***/ })

@@ -107914,9 +107914,9 @@ _store__WEBPACK_IMPORTED_MODULE_0__["default"].subscribe(function (mutation) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\personal growth\empirehomes\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\personal growth\empirehomes\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\personal growth\empirehomes\resources\sass\front_app.scss */"./resources/sass/front_app.scss");
+__webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\vue projects\empirehomes\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\vue projects\empirehomes\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\ANDREW BEN RICHARD\Desktop\vue projects\empirehomes\resources\sass\front_app.scss */"./resources/sass/front_app.scss");
 
 
 /***/ })

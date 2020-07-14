@@ -12,7 +12,6 @@
     <link rel="shortcut icon" href="{{ asset('/assets/images/favicon/1.png') }}" type="image/x-icon">
     @if(strpos($_SERVER['REQUEST_URI'], 'dashboard') !== false)
 
-
     @include('layouts.back_header')
     
   

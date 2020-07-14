@@ -1,7 +1,9 @@
 <template>
   <div class="header___sk_shop">
+    <title>{{title}} | My Empire Homes</title>
+
     <!-- Header Area-->
-    <header class="mextreo-header-area">
+    <header class="mextreo-header-area nav-fixed">
       <div class="container c-fulid-max">
         <div class="row">
           <div class="col-4 col-md-4">
@@ -26,16 +28,16 @@
                       <router-link to="/">Home</router-link>
                     </li>
                     <li>
-                      <router-link to="#">About Us</router-link>
+                      <router-link to="/about-us">About Us</router-link>
                     </li>
                     <li>
-                      <router-link to="#">Services</router-link>
+                      <router-link to="/services">Services</router-link>
                     </li>
                     <li>
-                      <router-link to="#">Projects</router-link>
+                      <router-link to="/projects">Projects</router-link>
                     </li>
                     <li>
-                      <router-link to="#">Contact</router-link>
+                      <router-link to="/contact">Contact</router-link>
                     </li>
                     <li class="tel">
                       <a href="tel:+2348145995586">+ (234)814-599-5586</a>
@@ -113,6 +115,11 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   mounted() {
     console.log("header mounted.");
+  },
+  props: {
+    title: {
+      string: true
+    }
   },
   data: () => ({
     activeItem: 0

@@ -12665,8 +12665,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12974,10 +12972,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log("header mounted.");
+  },
+  props: {
+    title: {
+      string: true
+    }
   },
   data: function data() {
     return {
@@ -88018,9 +88023,7 @@ var render = function() {
     "div",
     { staticClass: "site-wrapper" },
     [
-      _c("title", [_vm._v("Home | My Empire Homes")]),
-      _vm._v(" "),
-      _c("topHeader"),
+      _c("topHeader", { attrs: { title: "Home" } }),
       _vm._v(" "),
       _c("section", { staticClass: "mextreo-hero" }, [
         _c("div", { staticClass: "container" }, [
@@ -88068,7 +88071,7 @@ var render = function() {
                                   "data-key": "rs-33",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide2-1-50x100.html",
+                                    "assets/front/slide2-1-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88079,7 +88082,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide2-1.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide2-1.jpg",
                                     title: "slide2",
                                     width: "1344",
                                     height: "537",
@@ -88325,7 +88328,7 @@ var render = function() {
                                   "data-key": "rs-36",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide1-2-50x100.jpg",
+                                    "assets/front/slide1-2-50x100.jpg",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88336,7 +88339,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide1-2.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide1-2.jpg",
                                     title: "slide1",
                                     width: "1170",
                                     height: "550",
@@ -88585,7 +88588,7 @@ var render = function() {
                                   "data-key": "rs-37",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide4-50x100.html",
+                                    "assets/front/slide4-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88596,7 +88599,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide4.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide4.jpg",
                                     title: "slide4",
                                     width: "1295",
                                     height: "978",
@@ -88886,10 +88889,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/abou-bg.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/abou-bg.jpg", alt: "" }
                 })
               ]
             ),
@@ -88902,10 +88902,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/about.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/about.jpg", alt: "" }
                 })
               ]
             )
@@ -89124,7 +89121,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "ws-t-year" }, [
                   _c("img", {
                     attrs: {
-                      src: "public/assets/front/img/about/success-y-bg.jpg",
+                      src: "assets/front/img/about/success-y-bg.jpg",
                       alt: ""
                     }
                   }),
@@ -89151,7 +89148,7 @@ var staticRenderFns = [
               [
                 _c("img", {
                   attrs: {
-                    src: "public/assets/front/img/about/success-bg.jpg",
+                    src: "assets/front/img/about/success-bg.jpg",
                     alt: ""
                   }
                 })
@@ -89166,10 +89163,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/success.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/success.jpg", alt: "" }
                 })
               ]
             )
@@ -89220,7 +89214,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project1.jpg",
+                          src: "assets/front/img/slide/project1.jpg",
                           alt: ""
                         }
                       })
@@ -89253,7 +89247,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project2.jpg",
+                          src: "assets/front/img/slide/project2.jpg",
                           alt: ""
                         }
                       })
@@ -89286,7 +89280,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
+                          src: "assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })
@@ -89319,7 +89313,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
+                          src: "assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })
@@ -89502,7 +89496,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "header___sk_shop" }, [
-    _c("header", { staticClass: "mextreo-header-area" }, [
+    _c("title", [_vm._v(_vm._s(_vm.title) + " | My Empire Homes")]),
+    _vm._v(" "),
+    _c("header", { staticClass: "mextreo-header-area nav-fixed" }, [
       _c("div", { staticClass: "container c-fulid-max" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-4 col-md-4" }, [
@@ -89550,7 +89546,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/about-us" } }, [
                               _vm._v("About Us")
                             ])
                           ],
@@ -89560,7 +89556,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/services" } }, [
                               _vm._v("Services")
                             ])
                           ],
@@ -89570,7 +89566,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/projects" } }, [
                               _vm._v("Projects")
                             ])
                           ],
@@ -89580,7 +89576,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/contact" } }, [
                               _vm._v("Contact")
                             ])
                           ],

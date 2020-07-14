@@ -1,118 +1,88 @@
 <template>
   <div class="home__holder">
-    <topHeader />
-
-    <!-- Page Header Section Start Here -->
-    <section class="page-header style-2">
+    <topHeader title="Contact " />
+    <section class="mextreo-hero inner mar-bot-140">
       <div class="container">
-        <div class="page-title text-center">
-          <h3>Contact Information</h3>
-          <ul class="breadcrumb">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>Contact</li>
-          </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="hero-content">
+              <h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="1500">Contact</h6>
+              <h2 data-aos="fade-up" data-aos-duration="2000">Get In Touch</h2>
+
+              <div class="mextreo-contact" data-aos="fade-up" data-aos-duration="3000">
+                <form id="cf" method="POST">
+                  <div class="form-group mcfg">
+                    <input
+                      type="text"
+                      class="form-control m-input"
+                      name="name"
+                      id="name"
+                      placeholder="Your Name *"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder ='Your Name *'"
+                    />
+                  </div>
+                  <div class="form-group mcfg">
+                    <input
+                      type="text"
+                      class="form-control m-input"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email *"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder ='Your Email *'"
+                    />
+                  </div>
+                  <div class="form-group mcfg">
+                    <textarea
+                      rows="4"
+                      class="form-control m-input"
+                      name="msg"
+                      id="msg"
+                      placeholder="Message *"
+                      onfocus="this.placeholder =''"
+                      onblur="this.placeholder ='Message *'"
+                    ></textarea>
+                  </div>
+                  <button type="submit" id="submit" class="m-submit">send message</button>
+                  <div class="col-md-12 text-center">
+                    <div class="cf-msg"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="hero-inner-img">
+              <img
+                src="assets/img/hero/contact.jpg"
+                alt
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              />
+            </div>
+            <div class="contact-details" data-aos="fade-up" data-aos-duration="3000">
+              <img src="assets/img/logo-contact.png" alt />
+              <div class="single-info">
+                <h5>Address:</h5>
+                <p>Suite 20, 2nd floor, Olowu Shopping Complex, 70 Airport Rd, Oka,</p>
+                <p>Benin City, Nigeria</p>
+              </div>
+              <div class="single-info">
+                <h5>Phone:</h5>
+                <p>+234-814-599-5586</p>
+                <p>+234-811-320-7001</p>
+              </div>
+              <div class="single-info">
+                <h5>Email:</h5>
+                <p>info@myempirehomes.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Page Header Section Ending Here -->
-
-    <!-- Contact Us Section Start Here -->
-    <section class="contact-information padding-tb pb-xl-0">
-      <div class="container">
-        <div class="section-wrapper">
-          <div class="row">
-            <div class="col-lg-6 col-12">
-              <h5>Contact Information</h5>
-              <div class="post-item">
-                <div class="post-thumb">
-                  <img src="/assets/front/images/contac/icon/04.png" alt="contact" />
-                </div>
-                <div class="post-content">
-                  <h6>office adress</h6>
-                  <p>Suite 02, Level 12, Sahera Tropical Center 218</p>
-                  <p>New Elephant Road, Dhaka - 1205</p>
-                </div>
-              </div>
-              <div class="post-item">
-                <div class="post-thumb">
-                  <img src="/assets/front/images/contac/icon/05.png" alt="contact" />
-                </div>
-                <div class="post-content">
-                  <h6>phone number :</h6>
-                  <p>+8801678170593, 01919-264687</p>
-                  <p>02-9611936</p>
-                </div>
-              </div>
-              <div class="post-item">
-                <div class="post-thumb">
-                  <img src="/assets/front/images/contac/icon/06.png" alt="contact" />
-                </div>
-                <div class="post-content">
-                  <h6>email adress :</h6>
-                  <p>support@Mezban.com</p>
-                </div>
-              </div>
-              <div class="post-item">
-                <div class="post-thumb">
-                  <img src="/assets/front/images/contac/icon/07.png" alt="contact" />
-                </div>
-                <div class="post-content">
-                  <h6>website adress</h6>
-                  <p>http://readpetuk.com</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-12">
-              <h5>Send Us A Message</h5>
-              <form class="d-flex flex-wrap justify-content-between">
-                <input type="text" placeholder="Your Name" />
-                <input type="text" placeholder="Your Email" />
-                <input class="w-100" type="text" placeholder="Subject" />
-                <textarea rows="8" placeholder="Your Message"></textarea>
-                <button type="submit" class="food-btn style-2">
-                  <span>Submit Message</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Us Section Ending Here -->
-
-    <!-- G-Map Section Start Here -->
-    <div class="gmaps-section">
-      <div class="map-area">
-        <iframe
-          src="https://maps.google.com/maps?q=new%40codexcoder&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-          style="border:0"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-    <!-- G-Map Section Ending Here -->
-
-    <!-- Newsletter Section Start Here -->
-    <div class="news-letter">
-      <div class="container">
-        <div class="section-wrapper">
-          <div class="news-title">
-            <h3>For Newsletter</h3>
-          </div>
-          <div class="news-form">
-            <form action="https://www.foxcoders.com/">
-              <label>
-                <input type="email" name="email" placeholder="Enter Your Email" />
-              </label>
-              <input type="submit" name="submit" value="Subscribe now" />
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Newsletter Section Ending Here -->
+    <!-- /Mextreo Hero Section-->
 
     <Bottomfooter />
   </div>

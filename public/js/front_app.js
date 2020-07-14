@@ -2065,70 +2065,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2385,36 +2321,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2440,8 +2346,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/header.vue */ "./resources/js/components/frontendComponents/pages/layouts/header.vue");
 /* harmony import */ var _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/footer.vue */ "./resources/js/components/frontendComponents/pages/layouts/footer.vue");
-//
-//
 //
 //
 //
@@ -3509,10 +3413,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log("header mounted.");
+  },
+  props: {
+    title: {
+      string: true
+    }
   },
   data: function data() {
     return {
@@ -3828,26 +3739,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    this.$route.params;
+    console.log("Donate mounted.");
   },
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -3856,25 +3753,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      paystackkey: "pk_test_6382db1bfccac4380925f4166400907ee4e464fd",
-      //paystack public key
-      project: {
-        id: "",
-        project_name: "",
-        project_des: "",
-        project_img: "",
-        project_slug: "",
-        created_at: ""
-      },
-      form: new Form({
-        first_name: "",
-        last_name: "",
-        email: "",
-        number: "",
-        amount: "",
-        message: "",
-        project_slug: this.$route.params.slug
-      })
+      projects: {}
     };
   },
   computed: {
@@ -3892,32 +3771,22 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     callback: function callback(response) {
       console.log(response);
-      this.saveDonation();
     },
     close: function close() {
       console.log("Payment closed");
     },
-    loadProject: function loadProject() {
+    loadProjects: function loadProjects() {
       var _this = this;
 
-      axios.get("/api/sc_admin/single/project/" + this.$route.params.slug).then(function (_ref) {
+      axios.get("/api/sc_admin/projects").then(function (_ref) {
         var data = _ref.data;
-        return _this.project = data;
+        return _this.projects = data;
       });
-    },
-    saveDonation: function saveDonation() {
-      var _this2 = this;
-
-      this.$Progress.start();
-      this.form.post("/api/sc_admin/post/donation").then(function () {
-        _this2.$router.replace({
-          name: "thanks"
-        });
-      })["catch"](function () {});
     }
   },
   created: function created() {
-    this.loadProject();
+    this.loadProjects();
+    this.$route.params;
   }
 });
 
@@ -3936,541 +3805,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/footer.vue */ "./resources/js/components/frontendComponents/pages/layouts/footer.vue");
 /* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-paystack */ "./node_modules/vue-paystack/dist/paystack.min.js");
 /* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_paystack__WEBPACK_IMPORTED_MODULE_2__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -42617,15 +41951,11 @@ var render = function() {
     "div",
     { staticClass: "about__holder" },
     [
-      _c("topHeader"),
-      _vm._v(" "),
-      _c("title", [_vm._v("About Us | My Empire Homes")]),
+      _c("topHeader", { attrs: { title: "About us " } }),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
       _vm._v(" "),
       _c("Bottomfooter")
     ],
@@ -42651,7 +41981,11 @@ var staticRenderFns = [
                     "data-aos-duration": "1500"
                   }
                 },
-                [_vm._v("MEXTREO")]
+                [
+                  _vm._v(
+                    "My Empire Homes a Member of Achievers Assured Empire Limited"
+                  )
+                ]
               ),
               _vm._v(" "),
               _c(
@@ -42669,19 +42003,7 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "\n              Interior Design is a full service firm that\n              specializes in high end residential projects. The mission of NYC Interior Design is to\n              create in­te­ri­ors that are timeless, sophisticated and functional. The company was formed\n              in 2010 by principal Erika Flugger. Trained as an Interior Designer in New York City, Erika\n              has developed a passion for design from different eras, origins, cultures and styles. Her\n              understanding of scale, proportion and design leads her to create harmonious, clean and warm\n              residential environments.\n            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
-                },
-                [
-                  _vm._v(
-                    "\n              Erika Flugger studied at the New York School of\n              Interior Design and gained her experience working at two top design firms in New York City.\n              She has designed, renovated and redesigned high end residential projects throughout the city\n              and was fortunate to work on Metropolitan Home’s Showtime House, a $20 million, 8,800 square\n              foot Greek Revival townhouse in New York’s Grammercy Park that was transformed into a chic.\n              She has designed, renovated and redesigned high end residential projects throughout the city\n              and was fortunate to work on Me.\n            "
+                    "\n              My Empire Homes is a leading contemporary Construction company\n              based in Benin city, Nigeria. We provide exceptionally high quality\n              residential and commercial properties that deliver quantitative value to our clients.\n              We like to think that investing in our properties is the beginning of a family legacy.\n              At the heart of My Empire Homes culture lies the desire to deliver value to our customers.\n              From the Architecture structure to the handover of keys, the Company endeavor’s\n              to keep its promise to make sure every detail is flawless.\n            "
                   )
                 ]
               )
@@ -42692,7 +42014,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "hero-inner-img" }, [
               _c("img", {
                 attrs: {
-                  src: "assets/img/hero/inner-hero.jpg",
+                  src: "assets/front/img/hero/inner-hero.jpg",
                   alt: "",
                   "data-aos": "fade-left",
                   "data-aos-duration": "2000"
@@ -42702,7 +42024,7 @@ var staticRenderFns = [
               _c("img", {
                 staticClass: "hero-inner-2",
                 attrs: {
-                  src: "assets/img/hero/inner-hero-after2.jpg",
+                  src: "assets/front/img/hero/inner-hero-after2.jpg",
                   alt: "",
                   "data-aos": "fade-up",
                   "data-aos-duration": "3000"
@@ -42718,208 +42040,51 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "mextreo-about pt-res-50" }, [
+    return _c("section", { staticClass: "mextro-about" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-5 order-md-1 order-2" }, [
-            _c(
-              "div",
-              {
-                staticClass: "about-bg",
-                attrs: { "data-aos": "fade-left", "data-aos-duration": "3000" }
-              },
-              [
-                _c("img", {
-                  attrs: {
-                    src: "assets/img/about/about-history-bg.jpg",
-                    alt: ""
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "m-about-img",
-                attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "assets/img/about/about-history.jpg", alt: "" }
-                })
-              ]
-            )
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-inner-img" }, [
+              _c("img", {
+                attrs: {
+                  src: "assets/front/img/hero/inner-hero.jpg",
+                  alt: "",
+                  "data-aos": "fade-left",
+                  "data-aos-duration": "2000"
+                }
+              })
+            ])
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-md-6 offset-md-1 order-md-2 order-1" },
-            [
-              _c("div", { staticClass: "m-about-content" }, [
-                _c(
-                  "h6",
-                  {
-                    staticClass: "ht-tittle",
-                    attrs: {
-                      "data-aos": "fade-right",
-                      "data-aos-duration": "1500"
-                    }
-                  },
-                  [_vm._v("History")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "h2",
-                  {
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "2000"
-                    }
-                  },
-                  [_vm._v("Our History")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "2500"
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n              Inspired by her father, a talented master\n              craftsman, Erika has a thorough understanding of timeless design, custom furniture and the\n              construction of fine hand crafted furnishings. Erika’s affinity for classical forms and\n              close attention to detail, quality and functionality permeates sophisticated living\n              environments. Often her projects are new developments where the clients are looking for a\n              complete luxury experience while also increasing the value of their new homes through\n              capital improvements.\n            "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "3000"
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n              Erika’s clients value her collaborative approach, her expertise on capital improvement and\n              her ability to translate her client’s lifestyle and preferences into one of a kind tailored\n              home. Inspired by her father, a talented master craftsman, Erika has a thorough\n              understanding of timeless design, custom furniture and the construction of fine hand crafted\n              furnishings.\n            "
-                    )
-                  ]
-                )
-              ])
-            ]
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "mextreo-blog" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "mex-blog-top" }, [
-          _c(
-            "h6",
-            {
-              staticClass: "ht-tittle",
-              attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
-            },
-            [_vm._v("Latest News")]
-          ),
-          _vm._v(" "),
-          _c(
-            "h2",
-            { attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" } },
-            [_vm._v("From Our Blog")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            {
-              staticClass: "col-md-4",
-              attrs: { "data-aos": "fade-up", "data-aos-duration": "1000" }
-            },
-            [
-              _c("div", { staticClass: "single-blog" }, [
-                _c("img", {
-                  attrs: { src: "assets/img/blog/single-blog.jpg", alt: "" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "sb-content" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("h3", [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "single-info" }, [
+                    _c("h5", [_vm._v("Our Vision")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "\n                  Capturing the Essence of\n                  Home in Ultra-Modern\n                "
+                        "To be the leading Real estate online listing company in Nigeria and across borders."
                       )
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Dec 15, 2020")])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "col-md-4",
-              attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
-            },
-            [
-              _c("div", { staticClass: "single-blog" }, [
-                _c("img", {
-                  attrs: { src: "assets/img/blog/single-blog-2.jpg", alt: "" }
-                }),
+                  ])
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "sb-content" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("h3", [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "single-info" }, [
+                    _c("h5", [_vm._v("Our Mission")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "\n                  Renovation Architecture\n                  and Design\n                "
+                        "To continually helping you close that deal in time and gaining that next client."
                       )
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Dec 25, 2020")])
+                  ])
                 ])
               ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "col-md-4",
-              attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
-            },
-            [
-              _c("div", { staticClass: "single-blog" }, [
-                _c("img", {
-                  attrs: { src: "assets/img/blog/single-blog-3.jpg", alt: "" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "sb-content" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("h3", [
-                      _vm._v(
-                        "\n                  Architechture Reclaimed\n                  Wolid for the Modern\n                "
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Dec 10, 2020")])
-                ])
-              ])
-            ]
-          )
+            ])
+          ])
         ])
       ])
     ])
@@ -43121,15 +42286,9 @@ var render = function() {
     "div",
     { staticClass: "home__holder" },
     [
-      _c("topHeader"),
+      _c("topHeader", { attrs: { title: "Contact " } }),
       _vm._v(" "),
       _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
       _vm._v(" "),
       _c("Bottomfooter")
     ],
@@ -43141,198 +42300,149 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "page-header style-2" }, [
+    return _c("section", { staticClass: "mextreo-hero inner mar-bot-140" }, [
       _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "page-title text-center" }, [
-          _c("h3", [_vm._v("Contact Information")]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "breadcrumb" }, [
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Home")])]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Contact")])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "contact-information padding-tb pb-xl-0" },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "section-wrapper" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-lg-6 col-12" }, [
-                _c("h5", [_vm._v("Contact Information")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "post-item" }, [
-                  _c("div", { staticClass: "post-thumb" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/assets/front/images/contac/icon/04.png",
-                        alt: "contact"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "post-content" }, [
-                    _c("h6", [_vm._v("office adress")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v("Suite 02, Level 12, Sahera Tropical Center 218")
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-content" }, [
+              _c(
+                "h6",
+                {
+                  staticClass: "ht-tittle",
+                  attrs: {
+                    "data-aos": "fade-right",
+                    "data-aos-duration": "1500"
+                  }
+                },
+                [_vm._v("Contact")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h2",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
+                },
+                [_vm._v("Get In Touch")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "mextreo-contact",
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+                },
+                [
+                  _c("form", { attrs: { id: "cf", method: "POST" } }, [
+                    _c("div", { staticClass: "form-group mcfg" }, [
+                      _c("input", {
+                        staticClass: "form-control m-input",
+                        attrs: {
+                          type: "text",
+                          name: "name",
+                          id: "name",
+                          placeholder: "Your Name *",
+                          onfocus: "this.placeholder = ''",
+                          onblur: "this.placeholder ='Your Name *'"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("New Elephant Road, Dhaka - 1205")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "post-item" }, [
-                  _c("div", { staticClass: "post-thumb" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/assets/front/images/contac/icon/05.png",
-                        alt: "contact"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "post-content" }, [
-                    _c("h6", [_vm._v("phone number :")]),
+                    _c("div", { staticClass: "form-group mcfg" }, [
+                      _c("input", {
+                        staticClass: "form-control m-input",
+                        attrs: {
+                          type: "text",
+                          name: "email",
+                          id: "email",
+                          placeholder: "Your Email *",
+                          onfocus: "this.placeholder = ''",
+                          onblur: "this.placeholder ='Your Email *'"
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("+8801678170593, 01919-264687")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("02-9611936")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "post-item" }, [
-                  _c("div", { staticClass: "post-thumb" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/assets/front/images/contac/icon/06.png",
-                        alt: "contact"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "post-content" }, [
-                    _c("h6", [_vm._v("email adress :")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("support@Mezban.com")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "post-item" }, [
-                  _c("div", { staticClass: "post-thumb" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/assets/front/images/contac/icon/07.png",
-                        alt: "contact"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "post-content" }, [
-                    _c("h6", [_vm._v("website adress")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("http://readpetuk.com")])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-12" }, [
-                _c("h5", [_vm._v("Send Us A Message")]),
-                _vm._v(" "),
-                _c(
-                  "form",
-                  { staticClass: "d-flex flex-wrap justify-content-between" },
-                  [
-                    _c("input", {
-                      attrs: { type: "text", placeholder: "Your Name" }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: { type: "text", placeholder: "Your Email" }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "w-100",
-                      attrs: { type: "text", placeholder: "Subject" }
-                    }),
-                    _vm._v(" "),
-                    _c("textarea", {
-                      attrs: { rows: "8", placeholder: "Your Message" }
-                    }),
+                    _c("div", { staticClass: "form-group mcfg" }, [
+                      _c("textarea", {
+                        staticClass: "form-control m-input",
+                        attrs: {
+                          rows: "4",
+                          name: "msg",
+                          id: "msg",
+                          placeholder: "Message *",
+                          onfocus: "this.placeholder =''",
+                          onblur: "this.placeholder ='Message *'"
+                        }
+                      })
+                    ]),
                     _vm._v(" "),
                     _c(
                       "button",
                       {
-                        staticClass: "food-btn style-2",
-                        attrs: { type: "submit" }
+                        staticClass: "m-submit",
+                        attrs: { type: "submit", id: "submit" }
                       },
-                      [_c("span", [_vm._v("Submit Message")])]
-                    )
-                  ]
-                )
-              ])
+                      [_vm._v("send message")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-12 text-center" }, [
+                      _c("div", { staticClass: "cf-msg" })
+                    ])
+                  ])
+                ]
+              )
             ])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "gmaps-section" }, [
-      _c("div", { staticClass: "map-area" }, [
-        _c("iframe", {
-          staticStyle: { border: "0" },
-          attrs: {
-            src:
-              "https://maps.google.com/maps?q=new%40codexcoder&t=&z=17&ie=UTF8&iwloc=&output=embed",
-            allowfullscreen: ""
-          }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news-letter" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-wrapper" }, [
-          _c("div", { staticClass: "news-title" }, [
-            _c("h3", [_vm._v("For Newsletter")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "news-form" }, [
-            _c("form", { attrs: { action: "https://www.foxcoders.com/" } }, [
-              _c("label", [
-                _c("input", {
-                  attrs: {
-                    type: "email",
-                    name: "email",
-                    placeholder: "Enter Your Email"
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("input", {
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-inner-img" }, [
+              _c("img", {
                 attrs: {
-                  type: "submit",
-                  name: "submit",
-                  value: "Subscribe now"
+                  src: "assets/img/hero/contact.jpg",
+                  alt: "",
+                  "data-aos": "fade-left",
+                  "data-aos-duration": "2000"
                 }
               })
-            ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "contact-details",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+              },
+              [
+                _c("img", {
+                  attrs: { src: "assets/img/logo-contact.png", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-info" }, [
+                  _c("h5", [_vm._v("Address:")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Suite 20, 2nd floor, Olowu Shopping Complex, 70 Airport Rd, Oka,"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Benin City, Nigeria")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-info" }, [
+                  _c("h5", [_vm._v("Phone:")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("+234-814-599-5586")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("+234-811-320-7001")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-info" }, [
+                  _c("h5", [_vm._v("Email:")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("info@myempirehomes.com")])
+                ])
+              ]
+            )
           ])
         ])
       ])
@@ -43364,9 +42474,7 @@ var render = function() {
     "div",
     { staticClass: "site-wrapper" },
     [
-      _c("title", [_vm._v("Home | My Empire Homes")]),
-      _vm._v(" "),
-      _c("topHeader"),
+      _c("topHeader", { attrs: { title: "Home" } }),
       _vm._v(" "),
       _c("section", { staticClass: "mextreo-hero" }, [
         _c("div", { staticClass: "container" }, [
@@ -43414,7 +42522,7 @@ var render = function() {
                                   "data-key": "rs-33",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide2-1-50x100.html",
+                                    "assets/front/slide2-1-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -43425,7 +42533,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide2-1.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide2-1.jpg",
                                     title: "slide2",
                                     width: "1344",
                                     height: "537",
@@ -43671,7 +42779,7 @@ var render = function() {
                                   "data-key": "rs-36",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide1-2-50x100.jpg",
+                                    "assets/front/slide1-2-50x100.jpg",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -43682,7 +42790,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide1-2.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide1-2.jpg",
                                     title: "slide1",
                                     width: "1170",
                                     height: "550",
@@ -43931,7 +43039,7 @@ var render = function() {
                                   "data-key": "rs-37",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "public/assets/front/slide4-50x100.html",
+                                    "assets/front/slide4-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -43942,7 +43050,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "public/assets/front/sliders/slider-1/assets/slide4.jpg",
+                                      "assets/front/sliders/slider-1/assets/slide4.jpg",
                                     title: "slide4",
                                     width: "1295",
                                     height: "978",
@@ -44232,10 +43340,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/abou-bg.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/abou-bg.jpg", alt: "" }
                 })
               ]
             ),
@@ -44248,10 +43353,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/about.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/about.jpg", alt: "" }
                 })
               ]
             )
@@ -44470,7 +43572,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "ws-t-year" }, [
                   _c("img", {
                     attrs: {
-                      src: "public/assets/front/img/about/success-y-bg.jpg",
+                      src: "assets/front/img/about/success-y-bg.jpg",
                       alt: ""
                     }
                   }),
@@ -44497,7 +43599,7 @@ var staticRenderFns = [
               [
                 _c("img", {
                   attrs: {
-                    src: "public/assets/front/img/about/success-bg.jpg",
+                    src: "assets/front/img/about/success-bg.jpg",
                     alt: ""
                   }
                 })
@@ -44512,10 +43614,7 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/success.jpg",
-                    alt: ""
-                  }
+                  attrs: { src: "assets/front/img/about/success.jpg", alt: "" }
                 })
               ]
             )
@@ -44566,7 +43665,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project1.jpg",
+                          src: "assets/front/img/slide/project1.jpg",
                           alt: ""
                         }
                       })
@@ -44599,7 +43698,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project2.jpg",
+                          src: "assets/front/img/slide/project2.jpg",
                           alt: ""
                         }
                       })
@@ -44632,7 +43731,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
+                          src: "assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })
@@ -44665,7 +43764,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
+                          src: "assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })
@@ -44848,7 +43947,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "header___sk_shop" }, [
-    _c("header", { staticClass: "mextreo-header-area" }, [
+    _c("title", [_vm._v(_vm._s(_vm.title) + " | My Empire Homes")]),
+    _vm._v(" "),
+    _c("header", { staticClass: "mextreo-header-area nav-fixed" }, [
       _c("div", { staticClass: "container c-fulid-max" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-4 col-md-4" }, [
@@ -44896,7 +43997,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/about-us" } }, [
                               _vm._v("About Us")
                             ])
                           ],
@@ -44906,7 +44007,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/services" } }, [
                               _vm._v("Services")
                             ])
                           ],
@@ -44916,7 +44017,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/projects" } }, [
                               _vm._v("Projects")
                             ])
                           ],
@@ -44926,7 +44027,7 @@ var render = function() {
                         _c(
                           "li",
                           [
-                            _c("router-link", { attrs: { to: "#" } }, [
+                            _c("router-link", { attrs: { to: "/contact" } }, [
                               _vm._v("Contact")
                             ])
                           ],
@@ -45293,301 +44394,11 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("topHeader"),
+      _c("topHeader", { attrs: { title: "Projects " } }),
       _vm._v(" "),
-      _c("div", { staticClass: "page-title-area" }, [
-        _c("div", { staticClass: "d-table" }, [
-          _c("div", { staticClass: "d-table-cell" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "page-title-content" }, [
-                _c("h2", [_vm._v(_vm._s(_vm.project.project_name))]),
-                _vm._v(" "),
-                _c("ul", [
-                  _vm._m(0),
-                  _vm._v(" "),
-                  _c("li", [_vm._v(_vm._s(_vm.project.project_name))])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
+      _vm._m(0),
       _vm._v(" "),
-      _c("section", { staticClass: "causes-details-area ptb-100" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-10" }, [
-              _c("div", { staticClass: "causes-details-desc" }, [
-                _c("div", { staticClass: "causes-details-image" }, [
-                  _c("img", {
-                    attrs: {
-                      src: "/assets/img/donate/" + _vm.project.project_img,
-                      alt: "image"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "causes-details-text" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.project.project_name))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.project.project_des))]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "causes-details-payment" }, [
-                    _c("div", { staticClass: "contact-form" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.first_name,
-                                  expression:
-                                    "\n                                                        form.first_name\n                                                    "
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "name",
-                                id: "first-name",
-                                placeholder: "First Name",
-                                required: ""
-                              },
-                              domProps: { value: _vm.form.first_name },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "first_name",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.last_name,
-                                  expression: "form.last_name"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "name",
-                                placeholder: "Last Name",
-                                required: ""
-                              },
-                              domProps: { value: _vm.form.last_name },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "last_name",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.email,
-                                  expression: "form.email"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "email",
-                                placeholder: "Email",
-                                required: ""
-                              },
-                              domProps: { value: _vm.form.email },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "email",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.number,
-                                  expression: "form.number"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "text",
-                                placeholder: "Phone",
-                                required: ""
-                              },
-                              domProps: { value: _vm.form.number },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "number",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.amount,
-                                  expression: "form.amount"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "amount",
-                                id: "msg_subject",
-                                placeholder: "₦10,000.00",
-                                required: ""
-                              },
-                              domProps: { value: _vm.form.amount },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "amount",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("textarea", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.form.message,
-                                  expression: "form.message"
-                                }
-                              ],
-                              attrs: {
-                                name: "message",
-                                id: "message",
-                                rows: "10"
-                              },
-                              domProps: { value: _vm.form.message },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.form,
-                                    "message",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c(
-                            "div",
-                            { staticClass: "causes-details-btn" },
-                            [
-                              _c(
-                                "paystack",
-                                {
-                                  staticClass: "default-btn",
-                                  attrs: {
-                                    amount: _vm.form.amount + "00",
-                                    email: _vm.form.email,
-                                    paystackkey: _vm.paystackkey,
-                                    reference: _vm.reference,
-                                    callback: _vm.callback,
-                                    close: _vm.close,
-                                    embed: false
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fas fa-money-bill-alt"
-                                  }),
-                                  _vm._v(
-                                    "\n                                                    Donate Now\n                                                    "
-                                  ),
-                                  _c("span")
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
+      _vm._m(1),
       _vm._v(" "),
       _c("Bottomfooter")
     ],
@@ -45599,7 +44410,351 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Home")])])
+    return _c("section", { staticClass: "mextreo-hero inner" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-content" }, [
+              _c(
+                "h6",
+                {
+                  staticClass: "ht-tittle",
+                  attrs: {
+                    "data-aos": "fade-right",
+                    "data-aos-duration": "1500"
+                  }
+                },
+                [_vm._v("latest Project")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h2",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
+                },
+                [_vm._v("Project")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+                },
+                [
+                  _vm._v(
+                    "\n              In the past, interiors were put together\n              instinctively as a part of the process of building.[1] The profession of interior design has\n              been a consequence of the development of society and the complex architecture that has\n              resulted from the development of industrial processes. The pursuit of effective use of\n              space, user well-being and functional design has contributed to the development of the\n              contemporary interior design profession.\n            "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+                },
+                [
+                  _vm._v(
+                    "\n              The profession of interior design has been a\n              consequence of the development of society and the complex architecture that has resulted\n              from the development of industrial processes. The pursuit of effective use of space, user\n              well-being and functional design has contributed to the development of the contemporary\n              interior design profession. The profession of interior design is separate and distinct from\n              the role of interior decorator, a term commonly used in the US. The term is less common in\n              the UK, where the profession of interior design is still unregulated and therefore, strictly\n              speaking, not yet officially a profession.\n            "
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-inner-img" }, [
+              _c("img", {
+                attrs: {
+                  src: "assets/front/img/hero/project-hero.jpg",
+                  alt: "",
+                  "data-aos": "fade-left",
+                  "data-aos-duration": "2000"
+                }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "hero-inner-2",
+                attrs: {
+                  src: "assets/front/img/hero/project-hero2.jpg",
+                  alt: "",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "3000"
+                }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "project-gallery" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "1500" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio1.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio1.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio2.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio2.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio3.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio3.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "1500" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio4.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio4.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio5.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio5.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio6.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio6.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "assets/front/img/portfolio/portfolio7.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "assets/front/img/portfolio/portfolio7.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Introgen Abultreso")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Dedisgn, House")])
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -45626,7 +44781,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("topHeader"),
+      _c("topHeader", { attrs: { title: "Services" } }),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
@@ -45644,15 +44799,162 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "page-header style-2" }, [
+    return _c("section", { staticClass: "mextreo-hero inner mar-bot-50" }, [
       _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "page-title text-center" }, [
-          _c("h3", [_vm._v("Mnu Page Style")]),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-content" }, [
+              _c(
+                "h6",
+                {
+                  staticClass: "ht-tittle",
+                  attrs: {
+                    "data-aos": "fade-right",
+                    "data-aos-duration": "1500"
+                  }
+                },
+                [_vm._v("our Service")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h2",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
+                },
+                [
+                  _vm._v(
+                    "\n              We Offer Professional\n              Handyman services\n            "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+                },
+                [
+                  _vm._v(
+                    "Hire the best handymen near you within minutes, Hire plumbers, electricians, construction works and skilled artisans."
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("ul", [
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "1700"
+                    }
+                  },
+                  [_vm._v("HandyMen")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "1800"
+                    }
+                  },
+                  [_vm._v("Plumbers")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2100"
+                    }
+                  },
+                  [_vm._v("Electricians")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2500"
+                    }
+                  },
+                  [_vm._v("Ac Experts")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "2800"
+                    }
+                  },
+                  [_vm._v("Construction Workers")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "3000"
+                    }
+                  },
+                  [_vm._v("Carpenters")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    attrs: {
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "3200"
+                    }
+                  },
+                  [_vm._v("And much more")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn-1",
+                  attrs: {
+                    href: "about-us.html",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "3000"
+                  }
+                },
+                [_vm._v("Hire Artisans")]
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c("ul", { staticClass: "breadcrumb" }, [
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Home")])]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Menu")])
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "hero-inner-img" }, [
+              _c("img", {
+                attrs: {
+                  src: "assets/front/img/hero/service-hero.jpg",
+                  alt: "",
+                  "data-aos": "fade-left",
+                  "data-aos-duration": "2000"
+                }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "hero-inner-2",
+                attrs: {
+                  src: "assets/front/img/hero/service-hero2.jpg",
+                  alt: "",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "3000"
+                }
+              })
+            ])
           ])
         ])
       ])
@@ -45662,1140 +44964,151 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "product style-2 bg-body padding-tb" },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "section-header" }, [
-            _c("h3", [_vm._v("Our Tasty Menu Today")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Completely network impactful users whereas next-generation applications engage out thinking via tactical action."
-              )
-            ])
+    return _c("section", { staticClass: "architect" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-7 order-md-1 order-2" }, [
+            _c(
+              "div",
+              {
+                staticClass: "archit-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    src: "assets/front/img/about/abou-archtech.jpg",
+                    alt: ""
+                  }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "section-wrapper" }, [
-            _c("ul", { staticClass: "tab-bar" }, [
+          _c("div", { staticClass: "col-md-5 order-md-2 order-1" }, [
+            _c("div", { staticClass: "ab-arch-content" }, [
               _c(
-                "li",
+                "h6",
                 {
-                  staticClass: "tablinks",
+                  staticClass: "ht-tittle",
                   attrs: {
-                    id: "defaultOpen",
-                    onclick: "openCity(event, 'burger')"
+                    "data-aos": "fade-right",
+                    "data-aos-duration": "2500"
                   }
                 },
+                [_vm._v("Architect design")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h2",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
+                },
+                [_vm._v("Architecture")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+                },
                 [
-                  _c("img", {
-                    attrs: {
-                      src: "/assets/front/images/product/icon/01.png",
-                      alt: "food-product"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Burger Menu")])
+                  _vm._v(
+                    "At My Empire Homes we have a wealth of experience across a number of sectors including; Traditional Residential, Apartments, Build to Rent, Student Housing, Co-Living, Hotel & Leisure, Offices, Health Care, Industrial and Education, with experience gained on a number of large projects"
+                  )
                 ]
               ),
               _vm._v(" "),
               _c(
-                "li",
+                "a",
                 {
-                  staticClass: "tablinks",
-                  attrs: { onclick: "openCity(event, 'pizza')" }
+                  staticClass: "btn-1",
+                  attrs: {
+                    href: "about-us.html",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "3000"
+                  }
                 },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "/assets/front/images/product/icon/02.png",
-                      alt: "food-product"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("fizza menu")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "tablinks",
-                  attrs: { onclick: "openCity(event, 'snaks')" }
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "/assets/front/images/product/icon/03.png",
-                      alt: "food-product"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("snaks Menu")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "tablinks",
-                  attrs: { onclick: "openCity(event, 'drinks')" }
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "/assets/front/images/product/icon/04.png",
-                      alt: "food-product"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("drinks Menu")])
-                ]
+                [_vm._v("Contact us")]
               )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tabcontent", attrs: { id: "burger" } }, [
-              _c("div", { staticClass: "row no-gutters" }, [
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/01.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/02.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/02.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/01.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tabcontent", attrs: { id: "pizza" } }, [
-              _c("div", { staticClass: "row no-gutters" }, [
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/02.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/01.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tabcontent", attrs: { id: "snaks" } }, [
-              _c("div", { staticClass: "row no-gutters" }, [
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/01.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/02.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tabcontent", attrs: { id: "drinks" } }, [
-              _c("div", { staticClass: "row no-gutters" }, [
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/04.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/03.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/02.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-12" }, [
-                  _c("div", { staticClass: "product-item style-2" }, [
-                    _c("div", { staticClass: "product-thumb" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/assets/front/images/product/01.jpg",
-                          alt: "food-product"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "price" }, [_vm._v("$20")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-content" }, [
-                      _c("div", { staticClass: "product-title" }, [
-                        _c("h6", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Cream Chicken Chiladas")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "rating" }, [
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "icofont-star" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-desc" }, [
-                        _c("p", [
-                          _vm._v(
-                            "Conveniently imaiipact are worldwide andng datang arovem theme with there"
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
             ])
           ])
         ])
-      ]
-    )
+      ])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news-letter" }, [
+    return _c("section", { staticClass: "interior" }, [
       _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-wrapper" }, [
-          _c("div", { staticClass: "news-title" }, [
-            _c("h3", [_vm._v("For Newsletter")])
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("div", { staticClass: "ab-interior-content" }, [
+              _c(
+                "h6",
+                {
+                  staticClass: "ht-tittle",
+                  attrs: {
+                    "data-aos": "fade-right",
+                    "data-aos-duration": "2500"
+                  }
+                },
+                [_vm._v("Property Listing Marketplace")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h2",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
+                },
+                [_vm._v("Rent, Buy and sell")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+                },
+                [
+                  _vm._v(
+                    "We offer an easy to navigate property search experience and a full mobile search platform that includes our mobile-optimized website, Real Estate Search iPhone app and Real Estate Android® app. Whether you are at home or on-the-go, we make it easy for you to access our network of hundreds of thousands national real estate listings."
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn-1",
+                  attrs: {
+                    href: "about-us.html",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "3000"
+                  }
+                },
+                [_vm._v("Explore Marketplace")]
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "news-form" }, [
-            _c("form", { attrs: { action: "https://www.foxcoders.com/" } }, [
-              _c("label", [
-                _c("input", {
+          _c("div", { staticClass: "col-md-7" }, [
+            _c(
+              "div",
+              {
+                staticClass: "interior-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+              },
+              [
+                _c("img", {
                   attrs: {
-                    type: "email",
-                    name: "email",
-                    placeholder: "Enter Your Email"
+                    src: "assets/front/img/about/abou-interior.jpg",
+                    alt: ""
                   }
                 })
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                attrs: {
-                  type: "submit",
-                  name: "submit",
-                  value: "Subscribe now"
-                }
-              })
-            ])
+              ]
+            )
           ])
         ])
       ])
@@ -63793,7 +62106,7 @@ var routes = [{
   component: __webpack_require__(/*! ./components/frontendComponents/pages/contact.vue */ "./resources/js/components/frontendComponents/pages/contact.vue")["default"]
 }, {
   path: "/projects",
-  component: __webpack_require__(/*! ./components/frontendComponents/pages/projects.vue */ "./resources/js/components/frontendComponents/pages/projects.vue").defaul
+  component: __webpack_require__(/*! ./components/frontendComponents/pages/projects.vue */ "./resources/js/components/frontendComponents/pages/projects.vue")["default"]
 }, {
   path: "/services",
   component: __webpack_require__(/*! ./components/frontendComponents/pages/services.vue */ "./resources/js/components/frontendComponents/pages/services.vue")["default"]

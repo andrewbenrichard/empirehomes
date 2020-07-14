@@ -44,7 +44,7 @@ let routes = [
     {
         path: "/projects",
         component: require("./components/frontendComponents/pages/projects.vue")
-            .defaul
+            .default
     },
     {
         path: "/services",

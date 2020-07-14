@@ -1,659 +1,124 @@
 <template>
   <div>
-    <topHeader />
+    <topHeader title="Services" />
 
-    <!-- Page Header Section Start Here -->
-    <section class="page-header style-2">
+    <!-- Mextreo Hero Section -->
+    <section class="mextreo-hero inner mar-bot-50">
       <div class="container">
-        <div class="page-title text-center">
-          <h3>Mnu Page Style</h3>
-          <ul class="breadcrumb">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>Menu</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- Page Header Section Ending Here -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="hero-content">
+              <h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="1500">our Service</h6>
+              <h2 data-aos="fade-up" data-aos-duration="2000">
+                We Offer Professional
+                Handyman services
+              </h2>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="2500"
+              >Hire the best handymen near you within minutes, Hire plumbers, electricians, construction works and skilled artisans.</p>
 
-    <!-- Food Product Section Style 2 Start here -->
-    <section class="product style-2 bg-body padding-tb">
-      <div class="container">
-        <div class="section-header">
-          <h3>Our Tasty Menu Today</h3>
-          <p>Completely network impactful users whereas next-generation applications engage out thinking via tactical action.</p>
-        </div>
-        <div class="section-wrapper">
-          <ul class="tab-bar">
-            <li class="tablinks" id="defaultOpen" onclick="openCity(event, 'burger')">
-              <img src="/assets/front/images/product/icon/01.png" alt="food-product" />
-              <span>Burger Menu</span>
-            </li>
-            <li class="tablinks" onclick="openCity(event, 'pizza')">
-              <img src="/assets/front/images/product/icon/02.png" alt="food-product" />
-              <span>fizza menu</span>
-            </li>
-            <li class="tablinks" onclick="openCity(event, 'snaks')">
-              <img src="/assets/front/images/product/icon/03.png" alt="food-product" />
-              <span>snaks Menu</span>
-            </li>
-            <li class="tablinks" onclick="openCity(event, 'drinks')">
-              <img src="/assets/front/images/product/icon/04.png" alt="food-product" />
-              <span>drinks Menu</span>
-            </li>
-          </ul>
-          <div id="burger" class="tabcontent">
-            <div class="row no-gutters">
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/01.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/02.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/02.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/01.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ul>
+                <li data-aos="fade-up" data-aos-duration="1700">HandyMen</li>
+                <li data-aos="fade-up" data-aos-duration="1800">Plumbers</li>
+                <li data-aos="fade-up" data-aos-duration="2100">Electricians</li>
+                <li data-aos="fade-up" data-aos-duration="2500">Ac Experts</li>
+                <li data-aos="fade-up" data-aos-duration="2800">Construction Workers</li>
+                <li data-aos="fade-up" data-aos-duration="3000">Carpenters</li>
+                <li data-aos="fade-up" data-aos-duration="3200">And much more</li>
+              </ul>
+              <a
+                href="about-us.html"
+                class="btn-1"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >Hire Artisans</a>
             </div>
           </div>
-          <div id="pizza" class="tabcontent">
-            <div class="row no-gutters">
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/02.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/01.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="snaks" class="tabcontent">
-            <div class="row no-gutters">
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/01.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/02.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="drinks" class="tabcontent">
-            <div class="row no-gutters">
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/04.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/03.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/02.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="product-item style-2">
-                  <div class="product-thumb">
-                    <img src="/assets/front/images/product/01.jpg" alt="food-product" />
-                    <span class="price">$20</span>
-                  </div>
-                  <div class="product-content">
-                    <div class="product-title">
-                      <h6>
-                        <a href="#">Cream Chicken Chiladas</a>
-                      </h6>
-                      <div class="rating">
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                        <i class="icofont-star"></i>
-                      </div>
-                    </div>
-                    <div class="product-desc">
-                      <p>Conveniently imaiipact are worldwide andng datang arovem theme with there</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-md-6">
+            <div class="hero-inner-img">
+              <img
+                src="assets/front/img/hero/service-hero.jpg"
+                alt
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              />
+              <img
+                src="assets/front/img/hero/service-hero2.jpg"
+                alt
+                class="hero-inner-2"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Food Product Section Style 2 Ending here -->
-
-    <!-- Newsletter Section Start Here -->
-    <div class="news-letter">
+    <!-- /Mextreo Hero Section-->
+    <!--About Architect-->
+    <section class="architect">
       <div class="container">
-        <div class="section-wrapper">
-          <div class="news-title">
-            <h3>For Newsletter</h3>
+        <div class="row">
+          <div class="col-md-7 order-md-1 order-2">
+            <div class="archit-img" data-aos="fade-up" data-aos-duration="2500">
+              <img src="assets/front/img/about/abou-archtech.jpg" alt />
+            </div>
           </div>
-          <div class="news-form">
-            <form action="https://www.foxcoders.com/">
-              <label>
-                <input type="email" name="email" placeholder="Enter Your Email" />
-              </label>
-              <input type="submit" name="submit" value="Subscribe now" />
-            </form>
+          <div class="col-md-5 order-md-2 order-1">
+            <div class="ab-arch-content">
+              <h6 class="ht-tittle" data-aos="fade-right" data-aos-duration="2500">Architect design</h6>
+              <h2 data-aos="fade-up" data-aos-duration="2000">Architecture</h2>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="2500"
+              >At My Empire Homes we have a wealth of experience across a number of sectors including; Traditional Residential, Apartments, Build to Rent, Student Housing, Co-Living, Hotel & Leisure, Offices, Health Care, Industrial and Education, with experience gained on a number of large projects</p>
+              <a
+                href="about-us.html"
+                class="btn-1"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >Contact us</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Newsletter Section Ending Here -->
+    </section>
+    <!--/About Architect-->
 
-    <!-- <div class="col-lg-4 col-md-6" v-for="project in projects" :key="project.id">
-            <div class="single-causes">
-              <img :src="'//assets/front/img/donate/' + project.project_img" alt="image" />
-              <div class="icon">
-                <i class="flaticon-book-1"></i>
-              </div>
-
-              <div class="causes-content">
-                <span>#Education</span>
-                <h3>{{ project.project_name }}</h3>
-                <p>{{ project.project_des }}</p>
-
-                <router-link class="causes-btn-one" :to="'/donate/' + project.project_slug">
-                  Donate Now
-                  <i class="flaticon-right"></i>
-                </router-link>
-              </div>
+    <!--About Architect-->
+    <section class="interior">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="ab-interior-content">
+              <h6
+                class="ht-tittle"
+                data-aos="fade-right"
+                data-aos-duration="2500"
+              >Property Listing Marketplace</h6>
+              <h2 data-aos="fade-up" data-aos-duration="2000">Rent, Buy and sell</h2>
+              <p
+                data-aos="fade-up"
+                data-aos-duration="2500"
+              >We offer an easy to navigate property search experience and a full mobile search platform that includes our mobile-optimized website, Real Estate Search iPhone app and Real Estate Android® app. Whether you are at home or on-the-go, we make it easy for you to access our network of hundreds of thousands national real estate listings.</p>
+              <a
+                href="about-us.html"
+                class="btn-1"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >Explore Marketplace</a>
             </div>
-    </div>-->
+          </div>
+          <div class="col-md-7">
+            <div class="interior-img" data-aos="fade-up" data-aos-duration="2500">
+              <img src="assets/front/img/about/abou-interior.jpg" alt />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/About Architect-->
     <Bottomfooter />
   </div>
 </template>

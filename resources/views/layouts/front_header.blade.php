@@ -36,7 +36,7 @@
 <!-- Main StyleSheet CSS -->
 <link rel="stylesheet" href="public/assets/front/css/style.css">
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="public/assets/front/img/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="public/assets/front/img/favicon.png">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

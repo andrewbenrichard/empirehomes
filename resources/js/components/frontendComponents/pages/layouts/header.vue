@@ -114,7 +114,7 @@
 import { mapGetters, mapActions } from "vuex";
 export default {
   mounted() {
-    console.log("header mounted.");
+   
   },
   props: {
     title: {

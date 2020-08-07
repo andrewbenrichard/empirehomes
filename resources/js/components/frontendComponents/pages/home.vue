@@ -2,7 +2,6 @@
   <div class="site-wrapper">
     <topHeader title="Home" />
 
-    <!-- Mextreo Hero Section -->
     <section class="mextreo-hero">
       <div class="container">
         <div class="row">
@@ -556,9 +555,7 @@
         </div>
       </div>
     </section>
-    <!-- /Mextreo Hero Section-->
-
-    <!-- Mextreo About Section-->
+  
     <section class="mextreo-about">
       <div class="container">
         <div class="row">
@@ -651,9 +648,7 @@
         </div>
       </div>
     </section>
-    <!--/Mextreo Service Section-->
-
-    <!--Mextreo success section-->
+    
     <section class="work-success">
       <div class="container">
         <div class="row">
@@ -681,83 +676,7 @@
         </div>
       </div>
     </section>
-    <!--/Mextreo success section-->
-
-    <!--Project Section-->
-    <!-- <section class="recent-project">
-      <div class="container">
-        <div class="recent-pro-top">
-          <h2 class="rp-tittle">works</h2>
-          <h6 class="ht-tittle" data-aos="fade-up" data-aos-duration="2000">What we do</h6>
-          <h2 data-aos="fade-up" data-aos-duration="3000">Recent Project</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="project owl-carousel owl-theme">
-              <div class="item">
-                <div class="single-project" data-aos="fade-up" data-aos-duration="2500">
-                  <div class="sp-img">
-                    <img src="public/assets/front/img/slide/project1.jpg" alt />
-                  </div>
-                  <div class="sp-text">
-                    <h3>Introgen Abultreso</h3>
-                    <p>Dedisgn, House</p>
-                  </div>
-                  <a href="#">
-                    <i class="flaticon-add rp-icon"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-project" data-aos="fade-up" data-aos-duration="3000">
-                  <div class="sp-img">
-                    <img src="public/assets/front/img/slide/project2.jpg" alt />
-                  </div>
-                  <div class="sp-text">
-                    <h3>Introgen Abultreso</h3>
-                    <p>Dedisgn, House</p>
-                  </div>
-                  <a href="#">
-                    <i class="flaticon-add rp-icon"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-project" data-aos="fade-up" data-aos-duration="3000">
-                  <div class="sp-img">
-                    <img src="public/assets/front/img/slide/project3.jpg" alt />
-                  </div>
-                  <div class="sp-text">
-                    <h3>Introgen Abultreso</h3>
-                    <p>Dedisgn, House</p>
-                  </div>
-                  <a href="#">
-                    <i class="flaticon-add rp-icon"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-project" data-aos="fade-up" data-aos-duration="2500">
-                  <div class="sp-img">
-                    <img src="public/assets/front/img/slide/project3.jpg" alt />
-                  </div>
-                  <div class="sp-text">
-                    <h3>Introgen Abultreso</h3>
-                    <p>Dedisgn, House</p>
-                  </div>
-                  <a href="#">
-                    <i class="flaticon-add rp-icon"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!--/Project Section-->
-
+   
     <Bottomfooter />
   </div>
 </template>
@@ -768,7 +687,6 @@ import Bottomfooter from "./layouts/footer.vue";
 
 export default {
   mounted() {
-    console.log("Component mounted.");
   },
   components: {
     topHeader,
@@ -776,55 +694,12 @@ export default {
   },
   data() {
     return {
-      meals: {},
-      testimonials: {},
-      articles: {},
-      chef: {
-        id: "",
-        chef_name: "",
-        chef_des: "",
-        chef_location: "",
-        chef_img: ""
-      },
-      top_article: {
-        id: "",
-        article_title: "",
-        article_body: "",
-        article_date: "",
-        article_img: ""
-      }
+  
     };
   },
-  methods: {
-    loadMeals() {
-      axios.get("/api/sc_front/meals").then(({ data }) => (this.meals = data));
-    },
-    loadChef() {
-      axios.get("/api/sc_front/chef").then(({ data }) => (this.chef = data));
-    },
-    loadTestimonials() {
-      axios
-        .get("/api/sc_front/testimonials")
-        .then(({ data }) => (this.testimonials = data));
-    },
-    loadTopArticle() {
-      axios
-        .get("/api/sc_front/top_article")
-        .then(({ data }) => (this.top_article = data));
-    },
-    loadArticles() {
-      axios
-        .get("/api/sc_front/articles_mini")
-        .then(({ data }) => (this.articles = data));
-    }
-  },
+
   created() {
-    this.loadMeals();
-    this.loadChef();
-    this.loadTestimonials();
-    this.loadTopArticle();
-    this.loadArticles();
-    this.$route.params;
+    
   }
 };
 </script>

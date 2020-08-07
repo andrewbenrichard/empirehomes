@@ -92,7 +92,6 @@ import Bottomfooter from "./layouts/footer.vue";
 
 export default {
   mounted() {
-    console.log("Component mounted.");
   },
   components: {
     topHeader,

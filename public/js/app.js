@@ -12588,168 +12588,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
-  },
+  mounted: function mounted() {},
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {
-      meals: {},
-      testimonials: {},
-      articles: {},
-      chef: {
-        id: "",
-        chef_name: "",
-        chef_des: "",
-        chef_location: "",
-        chef_img: ""
-      },
-      top_article: {
-        id: "",
-        article_title: "",
-        article_body: "",
-        article_date: "",
-        article_img: ""
-      }
-    };
+    return {};
   },
-  methods: {
-    loadMeals: function loadMeals() {
-      var _this = this;
-
-      axios.get("/api/sc_front/meals").then(function (_ref) {
-        var data = _ref.data;
-        return _this.meals = data;
-      });
-    },
-    loadChef: function loadChef() {
-      var _this2 = this;
-
-      axios.get("/api/sc_front/chef").then(function (_ref2) {
-        var data = _ref2.data;
-        return _this2.chef = data;
-      });
-    },
-    loadTestimonials: function loadTestimonials() {
-      var _this3 = this;
-
-      axios.get("/api/sc_front/testimonials").then(function (_ref3) {
-        var data = _ref3.data;
-        return _this3.testimonials = data;
-      });
-    },
-    loadTopArticle: function loadTopArticle() {
-      var _this4 = this;
-
-      axios.get("/api/sc_front/top_article").then(function (_ref4) {
-        var data = _ref4.data;
-        return _this4.top_article = data;
-      });
-    },
-    loadArticles: function loadArticles() {
-      var _this5 = this;
-
-      axios.get("/api/sc_front/articles_mini").then(function (_ref5) {
-        var data = _ref5.data;
-        return _this5.articles = data;
-      });
-    }
-  },
-  created: function created() {
-    this.loadMeals();
-    this.loadChef();
-    this.loadTestimonials();
-    this.loadTopArticle();
-    this.loadArticles();
-    this.$route.params;
-  }
+  created: function created() {}
 });
 
 /***/ }),
@@ -12829,23 +12679,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("footer mounted.");
-  },
+  mounted: function mounted() {},
   data: function data() {
-    return {
-      articles: {}
-    };
+    return {};
   },
-  methods: {// loadArticle() {
-    //     axios
-    //         .get("/api/sc_admin/articles")
-    //         .then(({ data }) => (this.articles = data));
-    // }
-  },
-  created: function created() {// this.loadArticle();
-    // this.$route.params;
-  }
+  methods: {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -12980,9 +12819,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("header mounted.");
-  },
+  mounted: function mounted() {},
   props: {
     title: {
       string: true
@@ -89286,7 +89123,9 @@ var staticRenderFns = [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-md-2" }, [
               _c("div", { staticClass: "footer-logo" }, [
-                _c("img", { attrs: { src: "assets/img/logo-2.png", alt: "" } })
+                _c("img", {
+                  attrs: { src: "public/assets/img/logo.png", alt: "" }
+                })
               ])
             ]),
             _vm._v(" "),

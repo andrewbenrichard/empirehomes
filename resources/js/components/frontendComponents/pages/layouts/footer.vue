@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-md-2">
             <div class="footer-logo">
-              <img src="assets/img/logo-2.png" alt />
+              <img src="public/assets/img/logo.png" alt />
             </div>
           </div>
           <div class="col-md-10">
@@ -66,23 +66,17 @@
 <script>
 export default {
   mounted() {
-    console.log("footer mounted.");
   },
   data() {
     return {
-      articles: {}
+   
     };
   },
   methods: {
-    // loadArticle() {
-    //     axios
-    //         .get("/api/sc_admin/articles")
-    //         .then(({ data }) => (this.articles = data));
-    // }
+   
   },
   created() {
-    // this.loadArticle();
-    // this.$route.params;
+   
   }
 };
 </script>

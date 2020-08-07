@@ -2068,9 +2068,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
-  },
+  mounted: function mounted() {},
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -3029,168 +3027,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
-  },
+  mounted: function mounted() {},
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {
-      meals: {},
-      testimonials: {},
-      articles: {},
-      chef: {
-        id: "",
-        chef_name: "",
-        chef_des: "",
-        chef_location: "",
-        chef_img: ""
-      },
-      top_article: {
-        id: "",
-        article_title: "",
-        article_body: "",
-        article_date: "",
-        article_img: ""
-      }
-    };
+    return {};
   },
-  methods: {
-    loadMeals: function loadMeals() {
-      var _this = this;
-
-      axios.get("/api/sc_front/meals").then(function (_ref) {
-        var data = _ref.data;
-        return _this.meals = data;
-      });
-    },
-    loadChef: function loadChef() {
-      var _this2 = this;
-
-      axios.get("/api/sc_front/chef").then(function (_ref2) {
-        var data = _ref2.data;
-        return _this2.chef = data;
-      });
-    },
-    loadTestimonials: function loadTestimonials() {
-      var _this3 = this;
-
-      axios.get("/api/sc_front/testimonials").then(function (_ref3) {
-        var data = _ref3.data;
-        return _this3.testimonials = data;
-      });
-    },
-    loadTopArticle: function loadTopArticle() {
-      var _this4 = this;
-
-      axios.get("/api/sc_front/top_article").then(function (_ref4) {
-        var data = _ref4.data;
-        return _this4.top_article = data;
-      });
-    },
-    loadArticles: function loadArticles() {
-      var _this5 = this;
-
-      axios.get("/api/sc_front/articles_mini").then(function (_ref5) {
-        var data = _ref5.data;
-        return _this5.articles = data;
-      });
-    }
-  },
-  created: function created() {
-    this.loadMeals();
-    this.loadChef();
-    this.loadTestimonials();
-    this.loadTopArticle();
-    this.loadArticles();
-    this.$route.params;
-  }
+  created: function created() {}
 });
 
 /***/ }),
@@ -3270,23 +3118,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("footer mounted.");
-  },
+  mounted: function mounted() {},
   data: function data() {
-    return {
-      articles: {}
-    };
+    return {};
   },
-  methods: {// loadArticle() {
-    //     axios
-    //         .get("/api/sc_admin/articles")
-    //         .then(({ data }) => (this.articles = data));
-    // }
-  },
-  created: function created() {// this.loadArticle();
-    // this.$route.params;
-  }
+  methods: {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -3421,9 +3258,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("header mounted.");
-  },
+  mounted: function mounted() {},
   props: {
     title: {
       string: true
@@ -3590,8 +3425,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/header.vue */ "./resources/js/components/frontendComponents/pages/layouts/header.vue");
 /* harmony import */ var _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/footer.vue */ "./resources/js/components/frontendComponents/pages/layouts/footer.vue");
-/* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-paystack */ "./node_modules/vue-paystack/dist/paystack.min.js");
-/* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_paystack__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -3743,55 +3576,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Donate mounted.");
-  },
+  mounted: function mounted() {},
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    paystack: vue_paystack__WEBPACK_IMPORTED_MODULE_2___default.a
+    Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {
-      projects: {}
-    };
+    return {};
   },
-  computed: {
-    reference: function reference() {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-      for (var i = 0; i < 10; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-      }
-
-      return text;
-    }
-  },
-  methods: {
-    callback: function callback(response) {
-      console.log(response);
-    },
-    close: function close() {
-      console.log("Payment closed");
-    },
-    loadProjects: function loadProjects() {
-      var _this = this;
-
-      axios.get("/api/sc_admin/projects").then(function (_ref) {
-        var data = _ref.data;
-        return _this.projects = data;
-      });
-    }
-  },
-  created: function created() {
-    this.loadProjects();
-    this.$route.params;
-  }
+  computed: {},
+  methods: {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -3807,8 +3605,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/header.vue */ "./resources/js/components/frontendComponents/pages/layouts/header.vue");
 /* harmony import */ var _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/footer.vue */ "./resources/js/components/frontendComponents/pages/layouts/footer.vue");
-/* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-paystack */ "./node_modules/vue-paystack/dist/paystack.min.js");
-/* harmony import */ var vue_paystack__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_paystack__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -3903,55 +3699,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Donate mounted.");
-  },
+  mounted: function mounted() {},
   components: {
     topHeader: _layouts_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    paystack: vue_paystack__WEBPACK_IMPORTED_MODULE_2___default.a
+    Bottomfooter: _layouts_footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {
-      projects: {}
-    };
+    return {};
   },
-  computed: {
-    reference: function reference() {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-      for (var i = 0; i < 10; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-      }
-
-      return text;
-    }
-  },
-  methods: {
-    callback: function callback(response) {
-      console.log(response);
-    },
-    close: function close() {
-      console.log("Payment closed");
-    },
-    loadProjects: function loadProjects() {
-      var _this = this;
-
-      axios.get("/api/sc_admin/projects").then(function (_ref) {
-        var data = _ref.data;
-        return _this.projects = data;
-      });
-    }
-  },
-  created: function created() {
-    this.loadProjects();
-    this.$route.params;
-  }
+  computed: {},
+  created: function created() {}
 });
 
 /***/ }),
@@ -43706,7 +43466,9 @@ var staticRenderFns = [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-md-2" }, [
               _c("div", { staticClass: "footer-logo" }, [
-                _c("img", { attrs: { src: "assets/img/logo-2.png", alt: "" } })
+                _c("img", {
+                  attrs: { src: "public/assets/img/logo.png", alt: "" }
+                })
               ])
             ]),
             _vm._v(" "),
@@ -44986,17 +44748,6 @@ function normalizeComponent (
   }
 }
 
-
-/***/ }),
-
-/***/ "./node_modules/vue-paystack/dist/paystack.min.js":
-/*!********************************************************!*\
-  !*** ./node_modules/vue-paystack/dist/paystack.min.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-!function(e,t){ true?module.exports=t():undefined}(window,function(){return function(n){function a(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return n[e].call(t.exports,t,t.exports,a),t.l=!0,t.exports}var r={};return a.m=n,a.c=r,a.d=function(e,t,n){a.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(t,e){if(1&e&&(t=a(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(a.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)a.d(n,r,function(e){return t[e]}.bind(null,r));return n},a.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(t,"a",t),t},a.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},a.p="/dist/",a(a.s=0)}([function(e,t,n){"use strict";n.r(t);var r=function(e,t,n,r,a,o,i,c){var u,d="function"==typeof e?e.options:e;if(t&&(d.render=t,d.staticRenderFns=n,d._compiled=!0),r&&(d.functional=!0),o&&(d._scopeId="data-v-"+o),i?d._ssrRegister=u=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),a&&a.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(i)}:a&&(u=c?function(){a.call(this,this.$root.$options.shadowRoot)}:a),u)if(d.functional){d._injectStyles=u;var s=d.render;d.render=function(e,t){return u.call(t),s(e,t)}}else{var l=d.beforeCreate;d.beforeCreate=l?[].concat(l,u):[u]}return{exports:e,options:d}}({props:{embed:{type:Boolean,default:!1},paystackkey:{type:String,required:!0},email:{type:String,required:!0},amount:{type:Number,required:!0},reference:{type:String,required:!0},callback:{type:Function,required:!0,default:function(){}},close:{type:Function,required:!0,default:function(){}},metadata:{type:Object,default:function(){return{}}},currency:{type:String,default:"NGN"},plan:{type:String,default:""},quantity:{type:String,default:""},subaccount:{type:String,default:""},transactionCharge:{type:Number,default:0},bearer:{type:String,default:""}},data:function(){return{scriptLoaded:null}},created:function(){var t=this;this.scriptLoaded=new Promise(function(e){t.loadScript(function(){e()})})},mounted:function(){this.embed&&this.payWithPaystack()},methods:{loadScript:function(e){var t=document.createElement("script");t.src="https://js.paystack.co/v1/inline.js",document.getElementsByTagName("head")[0].appendChild(t),t.readyState?t.onreadystatechange=function(){"loaded"!==t.readyState&&"complete"!==t.readyState||(t.onreadystatechange=null,e())}:t.onload=function(){e()}},payWithPaystack:function(){var n=this;this.scriptLoaded&&this.scriptLoaded.then(function(){var e={key:n.paystackkey,email:n.email,amount:n.amount,ref:n.reference,callback:function(e){n.callback(e)},onClose:function(){n.close()},metadata:n.metadata,currency:n.currency,plan:n.plan,quantity:n.quantity,subaccount:n.subaccount,transaction_charge:n.transaction_charge,bearer:n.bearer};n.embed&&(e.container="paystackEmbedContainer");var t=window.PaystackPop.setup(e);n.embed||t.openIframe()})}}},function(){var e=this,t=e._self._c||e.$createElement;return e.embed?t("div",{attrs:{id:"paystackEmbedContainer"}}):t("button",{staticClass:"payButton",on:{click:e.payWithPaystack}},[e._t("default",[e._v("Make Payment")])],2)},[],!1,null,null,null);t.default=r.exports}])});
 
 /***/ }),
 

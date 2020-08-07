@@ -28,13 +28,13 @@
           <div class="col-md-6">
             <div class="hero-inner-img">
               <img
-                src="assets/front/img/hero/inner-hero.jpg"
+                src="public/assets/front/img/hero/inner-hero.jpg"
                 alt
                 data-aos="fade-left"
                 data-aos-duration="2000"
               />
               <img
-                src="assets/front/img/hero/inner-hero-after2.jpg"
+                src="public/assets/front/img/hero/inner-hero-after2.jpg"
                 alt
                 class="hero-inner-2"
                 data-aos="fade-up"
@@ -53,7 +53,7 @@
           <div class="col-md-6">
             <div class="hero-inner-img">
               <img
-                src="assets/front/img/hero/inner-hero.jpg"
+                src="public/assets/front/img/hero/inner-hero.jpg"
                 alt
                 data-aos="fade-left"
                 data-aos-duration="2000"
@@ -66,13 +66,13 @@
                 <div class="col-md-6">
                   <div class="single-info">
                     <h5>Our Vision</h5>
-                    <p>To be the leading Real estate online listing company in Nigeria and across borders.</p>
+                    <p>To be a trusted, integrated real-estate partner, creating value for urban and rural communities.</p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="single-info">
                     <h5>Our Mission</h5>
-                    <p>To continually helping you close that deal in time and gaining that next client.</p>
+                    <p>To put our clients interest above ours, providing the highest level of honesty and expertise.</p>
                   </div>
                 </div>
               </div>

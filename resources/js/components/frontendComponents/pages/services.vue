@@ -38,13 +38,13 @@
           <div class="col-md-6">
             <div class="hero-inner-img">
               <img
-                src="assets/front/img/hero/service-hero.jpg"
+                src="public/assets/front/img/hero/service-hero.jpg"
                 alt
                 data-aos="fade-left"
                 data-aos-duration="2000"
               />
               <img
-                src="assets/front/img/hero/service-hero2.jpg"
+                src="public/assets/front/img/hero/service-hero2.jpg"
                 alt
                 class="hero-inner-2"
                 data-aos="fade-up"
@@ -62,7 +62,7 @@
         <div class="row">
           <div class="col-md-7 order-md-1 order-2">
             <div class="archit-img" data-aos="fade-up" data-aos-duration="2500">
-              <img src="assets/front/img/about/abou-archtech.jpg" alt />
+              <img src="public/assets/front/img/about/abou-archtech.jpg" alt />
             </div>
           </div>
           <div class="col-md-5 order-md-2 order-1">
@@ -112,7 +112,7 @@
           </div>
           <div class="col-md-7">
             <div class="interior-img" data-aos="fade-up" data-aos-duration="2500">
-              <img src="assets/front/img/about/abou-interior.jpg" alt />
+              <img src="public/assets/front/img/about/abou-interior.jpg" alt />
             </div>
           </div>
         </div>

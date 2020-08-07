@@ -88071,7 +88071,7 @@ var render = function() {
                                   "data-key": "rs-33",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "assets/front/slide2-1-50x100.html",
+                                    "public/assets/front/slide2-1-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88082,7 +88082,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "assets/front/sliders/slider-1/assets/slide2-1.jpg",
+                                      "public/assets/front/sliders/slider-1/public/assets/slide2-1.jpg",
                                     title: "slide2",
                                     width: "1344",
                                     height: "537",
@@ -88328,7 +88328,7 @@ var render = function() {
                                   "data-key": "rs-36",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "assets/front/slide1-2-50x100.jpg",
+                                    "public/assets/front/slide1-2-50x100.jpg",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88339,7 +88339,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "assets/front/sliders/slider-1/assets/slide1-2.jpg",
+                                      "public/assets/front/sliders/slider-1/public/assets/slide1-2.jpg",
                                     title: "slide1",
                                     width: "1170",
                                     height: "550",
@@ -88588,7 +88588,7 @@ var render = function() {
                                   "data-key": "rs-37",
                                   "data-title": "Slide",
                                   "data-thumb":
-                                    "assets/front/slide4-50x100.html",
+                                    "public/assets/front/slide4-50x100.html",
                                   "data-anim":
                                     "ei:d,d;eo:d,d;s:1000,d;r:0,0;t:zoomout,scaledownfromright;sl:d,d;",
                                   "data-sloop": "s:4000;e:9000;"
@@ -88599,7 +88599,7 @@ var render = function() {
                                   staticClass: "rev-slidebg",
                                   attrs: {
                                     src:
-                                      "assets/front/sliders/slider-1/assets/slide4.jpg",
+                                      "public/assets/front/sliders/slider-1/public/assets/slide4.jpg",
                                     title: "slide4",
                                     width: "1295",
                                     height: "978",
@@ -88889,7 +88889,10 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: { src: "assets/front/img/about/abou-bg.jpg", alt: "" }
+                  attrs: {
+                    src: "public/assets/front/img/about/abou-bg.jpg",
+                    alt: ""
+                  }
                 })
               ]
             ),
@@ -88902,7 +88905,10 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: { src: "assets/front/img/about/about.jpg", alt: "" }
+                  attrs: {
+                    src: "public/assets/front/img/about/about.jpg",
+                    alt: ""
+                  }
                 })
               ]
             )
@@ -89121,7 +89127,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "ws-t-year" }, [
                   _c("img", {
                     attrs: {
-                      src: "assets/front/img/about/success-y-bg.jpg",
+                      src: "public/assets/front/img/about/success-y-bg.jpg",
                       alt: ""
                     }
                   }),
@@ -89148,7 +89154,7 @@ var staticRenderFns = [
               [
                 _c("img", {
                   attrs: {
-                    src: "assets/front/img/about/success-bg.jpg",
+                    src: "public/assets/front/img/about/success-bg.jpg",
                     alt: ""
                   }
                 })
@@ -89163,7 +89169,10 @@ var staticRenderFns = [
               },
               [
                 _c("img", {
-                  attrs: { src: "assets/front/img/about/success.jpg", alt: "" }
+                  attrs: {
+                    src: "public/assets/front/img/about/success.jpg",
+                    alt: ""
+                  }
                 })
               ]
             )
@@ -89214,7 +89223,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "assets/front/img/slide/project1.jpg",
+                          src: "public/assets/front/img/slide/project1.jpg",
                           alt: ""
                         }
                       })
@@ -89247,7 +89256,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "assets/front/img/slide/project2.jpg",
+                          src: "public/assets/front/img/slide/project2.jpg",
                           alt: ""
                         }
                       })
@@ -89280,7 +89289,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "assets/front/img/slide/project3.jpg",
+                          src: "public/assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })
@@ -89313,7 +89322,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "sp-img" }, [
                       _c("img", {
                         attrs: {
-                          src: "assets/front/img/slide/project3.jpg",
+                          src: "public/assets/front/img/slide/project3.jpg",
                           alt: ""
                         }
                       })

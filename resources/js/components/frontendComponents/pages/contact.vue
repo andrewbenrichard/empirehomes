@@ -55,14 +55,14 @@
           <div class="col-md-6">
             <div class="hero-inner-img">
               <img
-                src="assets/img/hero/contact.jpg"
+                src="public/assets/img/hero/contact.jpg"
                 alt
                 data-aos="fade-left"
                 data-aos-duration="2000"
               />
             </div>
             <div class="contact-details" data-aos="fade-up" data-aos-duration="3000">
-              <img src="assets/img/logo-contact.png" alt />
+              <img src="public/assets/img/logo-contact.png" alt />
               <div class="single-info">
                 <h5>Address:</h5>
                 <p>Suite 20, 2nd floor, Olowu Shopping Complex, 70 Airport Rd, Oka,</p>

@@ -53,7 +53,7 @@
           <div class="col-md-6">
             <div class="hero-inner-img">
               <img
-                src="public/assets/front/img/about/about-history.jpg"
+                src="public/assets/front/img/about/about3.jpg"
                 alt
                 data-aos="fade-left"
                 data-aos-duration="2000"

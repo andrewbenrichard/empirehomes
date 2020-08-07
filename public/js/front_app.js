@@ -3106,6 +3106,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -42016,7 +42020,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "hero-inner-img" }, [
               _c("img", {
                 attrs: {
-                  src: "public/assets/front/img/about/about-history.jpg",
+                  src: "public/assets/front/img/about/about3.jpg",
                   alt: "",
                   "data-aos": "fade-left",
                   "data-aos-duration": "2000"
@@ -43285,8 +43289,6 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
       _c("Bottomfooter")
     ],
     1
@@ -43494,13 +43496,22 @@ var staticRenderFns = [
                       }
                     },
                     [
-                      _c("div", { staticClass: "single-service si-2" }, [
-                        _c("i", {
-                          staticClass: "flaticon-interior-design service-icon"
-                        }),
-                        _vm._v(" "),
-                        _c("h3", [_vm._v("Repair and reconstruction")])
-                      ])
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "https://handymen.myempirehomes.com" }
+                        },
+                        [
+                          _c("div", { staticClass: "single-service si-2" }, [
+                            _c("i", {
+                              staticClass:
+                                "flaticon-interior-design service-icon"
+                            }),
+                            _vm._v(" "),
+                            _c("h3", [_vm._v("Repair and reconstruction")])
+                          ])
+                        ]
+                      )
                     ]
                   ),
                   _vm._v(" "),
@@ -43514,11 +43525,21 @@ var staticRenderFns = [
                       }
                     },
                     [
-                      _c("div", { staticClass: "single-service" }, [
-                        _c("i", { staticClass: "flaticon-plane service-icon" }),
-                        _vm._v(" "),
-                        _c("h3", [_vm._v("Planing")])
-                      ])
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "https://listings.myempirehomes.com" }
+                        },
+                        [
+                          _c("div", { staticClass: "single-service" }, [
+                            _c("i", {
+                              staticClass: "flaticon-plane service-icon"
+                            }),
+                            _vm._v(" "),
+                            _c("h3", [_vm._v("Property Listing")])
+                          ])
+                        ]
+                      )
                     ]
                   )
                 ])
@@ -43596,171 +43617,6 @@ var staticRenderFns = [
                 })
               ]
             )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "recent-project" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "recent-pro-top" }, [
-          _c("h2", { staticClass: "rp-tittle" }, [_vm._v("works")]),
-          _vm._v(" "),
-          _c(
-            "h6",
-            {
-              staticClass: "ht-tittle",
-              attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
-            },
-            [_vm._v("What we do")]
-          ),
-          _vm._v(" "),
-          _c(
-            "h2",
-            { attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" } },
-            [_vm._v("Recent Project")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "project owl-carousel owl-theme" }, [
-              _c("div", { staticClass: "item" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "single-project",
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "2500"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "sp-img" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "public/assets/front/img/slide/project1.jpg",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sp-text" }, [
-                      _c("h3", [_vm._v("Introgen Abultreso")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Dedisgn, House")])
-                    ]),
-                    _vm._v(" "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "flaticon-add rp-icon" })
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "item" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "single-project",
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "3000"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "sp-img" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "public/assets/front/img/slide/project2.jpg",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sp-text" }, [
-                      _c("h3", [_vm._v("Introgen Abultreso")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Dedisgn, House")])
-                    ]),
-                    _vm._v(" "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "flaticon-add rp-icon" })
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "item" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "single-project",
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "3000"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "sp-img" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sp-text" }, [
-                      _c("h3", [_vm._v("Introgen Abultreso")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Dedisgn, House")])
-                    ]),
-                    _vm._v(" "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "flaticon-add rp-icon" })
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "item" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "single-project",
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "2500"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "sp-img" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "public/assets/front/img/slide/project3.jpg",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sp-text" }, [
-                      _c("h3", [_vm._v("Introgen Abultreso")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Dedisgn, House")])
-                    ]),
-                    _vm._v(" "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "flaticon-add rp-icon" })
-                    ])
-                  ]
-                )
-              ])
-            ])
           ])
         ])
       ])
@@ -43962,15 +43818,7 @@ var render = function() {
                       "ul",
                       { staticClass: "sm sm-mint", attrs: { id: "main-menu" } },
                       [
-                        _c(
-                          "li",
-                          [
-                            _c("router-link", { attrs: { to: "/" } }, [
-                              _vm._v("Home")
-                            ])
-                          ],
-                          1
-                        ),
+                        _vm._m(1),
                         _vm._v(" "),
                         _c(
                           "li",
@@ -44012,14 +43860,14 @@ var render = function() {
                           1
                         ),
                         _vm._v(" "),
-                        _vm._m(1)
+                        _vm._m(2)
                       ]
                     )
                   ]
                 )
               ]),
               _vm._v(" "),
-              _vm._m(2)
+              _vm._m(3)
             ])
           ])
         ])
@@ -44028,7 +43876,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "side-panel hide" }, [
       _c("div", { staticClass: "sp-box" }, [
-        _vm._m(3),
+        _vm._m(4),
         _vm._v(" "),
         _c(
           "div",
@@ -44043,9 +43891,9 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _vm._m(4),
+        _vm._m(5),
         _vm._v(" "),
-        _vm._m(5)
+        _vm._m(6)
       ])
     ])
   ])
@@ -44060,6 +43908,12 @@ var staticRenderFns = [
       { staticClass: "main-menu-btn", attrs: { for: "main-menu-state" } },
       [_c("span", { staticClass: "main-menu-btn-icon" })]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Home")])])
   },
   function() {
     var _vm = this

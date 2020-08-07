@@ -629,16 +629,20 @@
               <div class="col-md-6">
                 <div class="row">
                   <div class="col-md-12" data-aos="fade-down-left" data-aos-duration="3000">
+                    <a href="https://handymen.myempirehomes.com">
                     <div class="single-service si-2">
                       <i class="flaticon-interior-design service-icon"></i>
                       <h3>Repair and reconstruction</h3>
                     </div>
+                    </a>
                   </div>
                   <div class="col-md-12" data-aos="fade-up-left" data-aos-duration="3000">
+                    <a href="https://listings.myempirehomes.com">
                     <div class="single-service">
                       <i class="flaticon-plane service-icon"></i>
-                      <h3>Planing</h3>
+                      <h3>Property Listing</h3>
                     </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -680,7 +684,7 @@
     <!--/Mextreo success section-->
 
     <!--Project Section-->
-    <section class="recent-project">
+    <!-- <section class="recent-project">
       <div class="container">
         <div class="recent-pro-top">
           <h2 class="rp-tittle">works</h2>
@@ -750,7 +754,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!--/Project Section-->
 

@@ -25,7 +25,7 @@
                   <!-- main menu definition -->
                   <ul id="main-menu" class="sm sm-mint">
                     <li>
-                      <router-link to="/">Home</router-link>
+                      <a href="/">Home</a>
                     </li>
                     <li>
                       <router-link to="/about-us">About Us</router-link>

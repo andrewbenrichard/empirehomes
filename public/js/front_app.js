@@ -3899,37 +3899,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -44796,8 +44765,6 @@ var render = function() {
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
       _c("Bottomfooter")
     ],
     1
@@ -44832,19 +44799,7 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "\n              We Offer Professional\n              Handyman services\n            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
-                },
-                [
-                  _vm._v(
-                    "Hire the best handymen near you within minutes, Hire plumbers, electricians, construction works and skilled artisans."
+                    "\n            We are a leader in real estate and property management innovation \n            "
                   )
                 ]
               ),
@@ -44858,7 +44813,7 @@ var staticRenderFns = [
                       "data-aos-duration": "1700"
                     }
                   },
-                  [_vm._v("HandyMen")]
+                  [_vm._v("Architectural Design")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -44869,7 +44824,7 @@ var staticRenderFns = [
                       "data-aos-duration": "1800"
                     }
                   },
-                  [_vm._v("Plumbers")]
+                  [_vm._v("Real Estate Construction")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -44880,7 +44835,7 @@ var staticRenderFns = [
                       "data-aos-duration": "2100"
                     }
                   },
-                  [_vm._v("Electricians")]
+                  [_vm._v("Interior & Exterior Design")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -44891,7 +44846,7 @@ var staticRenderFns = [
                       "data-aos-duration": "2500"
                     }
                   },
-                  [_vm._v("Ac Experts")]
+                  [_vm._v("Home & office maintenance service")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -44902,7 +44857,7 @@ var staticRenderFns = [
                       "data-aos-duration": "2800"
                     }
                   },
-                  [_vm._v("Construction Workers")]
+                  [_vm._v("Renovation")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -44913,33 +44868,9 @@ var staticRenderFns = [
                       "data-aos-duration": "3000"
                     }
                   },
-                  [_vm._v("Carpenters")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  {
-                    attrs: {
-                      "data-aos": "fade-up",
-                      "data-aos-duration": "3200"
-                    }
-                  },
-                  [_vm._v("And much more")]
+                  [_vm._v("Property online Listing")]
                 )
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn-1",
-                  attrs: {
-                    href: "about-us.html",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "3000"
-                  }
-                },
-                [_vm._v("Hire Artisans")]
-              )
+              ])
             ])
           ]),
           _vm._v(" "),
@@ -44973,149 +44904,116 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "architect" }, [
+    return _c("section", { staticClass: "project-gallery" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-7 order-md-1 order-2" }, [
+          _c("div", { staticClass: "col-md-4" }, [
             _c(
               "div",
               {
-                staticClass: "archit-img",
-                attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "1500" }
               },
               [
-                _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/abou-archtech.jpg",
-                    alt: ""
-                  }
-                })
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "public/assets/front/img/portfolio/portfolio1.jpg"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "public/assets/front/img/portfolio/portfolio2.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Architectural Design")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Contact us")])
+                ])
               ]
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-5 order-md-2 order-1" }, [
-            _c("div", { staticClass: "ab-arch-content" }, [
-              _c(
-                "h6",
-                {
-                  staticClass: "ht-tittle",
-                  attrs: {
-                    "data-aos": "fade-right",
-                    "data-aos-duration": "2500"
-                  }
-                },
-                [_vm._v("Architect design")]
-              ),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
-                },
-                [_vm._v("Architecture")]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
-                },
-                [
-                  _vm._v(
-                    "At My Empire Homes we have a wealth of experience across a number of sectors including; Traditional Residential, Apartments, Build to Rent, Student Housing, Co-Living, Hotel & Leisure, Offices, Health Care, Industrial and Education, with experience gained on a number of large projects"
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn-1",
-                  attrs: {
-                    href: "about-us.html",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "3000"
-                  }
-                },
-                [_vm._v("Contact us")]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "interior" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("div", { staticClass: "ab-interior-content" }, [
-              _c(
-                "h6",
-                {
-                  staticClass: "ht-tittle",
-                  attrs: {
-                    "data-aos": "fade-right",
-                    "data-aos-duration": "2500"
-                  }
-                },
-                [_vm._v("Property Listing Marketplace")]
-              ),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2000" }
-                },
-                [_vm._v("Rent, Buy and sell")]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
-                },
-                [
-                  _vm._v(
-                    "We offer an easy to navigate property search experience and a full mobile search platform that includes our mobile-optimized website, Real Estate Search iPhone app and Real Estate Android® app. Whether you are at home or on-the-go, we make it easy for you to access our network of hundreds of thousands national real estate listings."
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn-1",
-                  attrs: {
-                    href: "about-us.html",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "3000"
-                  }
-                },
-                [_vm._v("Explore Marketplace")]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7" }, [
+          _c("div", { staticClass: "col-md-4" }, [
             _c(
               "div",
               {
-                staticClass: "interior-img",
+                staticClass: "portfolio-img",
                 attrs: { "data-aos": "fade-up", "data-aos-duration": "2500" }
               },
               [
-                _c("img", {
-                  attrs: {
-                    src: "public/assets/front/img/about/abou-interior.jpg",
-                    alt: ""
-                  }
-                })
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "handymen.myempirehomes.com"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "public/assets/front/img/portfolio/handymen.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Home & office maintenance service")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Book Now")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "portfolio-img",
+                attrs: { "data-aos": "fade-up", "data-aos-duration": "3000" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      "data-fancybox": "gallery",
+                      href: "listings.myempirehomes.com"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "public/assets/front/img/portfolio/listing.jpg",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "flaticon-add rp-icon" })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "sp-text" }, [
+                  _c("h3", [_vm._v("Property online Listing")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Find your next home")])
+                ])
               ]
             )
           ])

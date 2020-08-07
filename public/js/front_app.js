@@ -41983,7 +41983,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "hero-inner-img" }, [
               _c("img", {
                 attrs: {
-                  src: "public/assets/front/img/hero/inner-hero.jpg",
+                  src: "public/assets/front/img/about/about.jpg",
                   alt: "",
                   "data-aos": "fade-left",
                   "data-aos-duration": "2000"
@@ -41993,7 +41993,7 @@ var staticRenderFns = [
               _c("img", {
                 staticClass: "hero-inner-2",
                 attrs: {
-                  src: "public/assets/front/img/hero/inner-hero-after2.jpg",
+                  src: "public/assets/front/img/about/about2.jpg",
                   alt: "",
                   "data-aos": "fade-up",
                   "data-aos-duration": "3000"
@@ -42016,7 +42016,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "hero-inner-img" }, [
               _c("img", {
                 attrs: {
-                  src: "public/assets/front/img/hero/inner-hero.jpg",
+                  src: "public/assets/front/img/about/about-history.jpg",
                   alt: "",
                   "data-aos": "fade-left",
                   "data-aos-duration": "2000"

@@ -1,53 +1,105 @@
-<!--- Font-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="public/assets/front/font/stylesheet.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:800&amp;display=swap" rel="stylesheet">
+ <!-- Header Area-->
+ <header class="mextreo-header-area nav-fixed">
+    <div class="container c-fulid-max">
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <div class="logo-wrapper">
+            <router-link to="/">
+              <img src="public/assets/front/img/logo.png" alt />
+            </router-link>
+          </div>
+        </div>
+        <div class="col-8 col-md-8">
+          <div class="mextreo-menu">
+            <div class="mxm-wrspper">
+              <nav class="main-nav" role="navigation">
+                <!-- Mobile menu toggle button (hamburger/x icon) -->
+                <input id="main-menu-state" type="checkbox" />
+                <label class="main-menu-btn" for="main-menu-state">
+                  <span class="main-menu-btn-icon"></span>
+                </label>
+                <!-- main menu definition -->
+                <ul id="main-menu" class="sm sm-mint">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/about-us">About Us</a>
+                  </li>
+                  <li>
+                    <a href="/services">Services</a>
+                  </li>
+                  <li>
+                    <a href="/projects">Projects</a>
+                  </li>
+                  <li>
+                    <a href="/contact-us">Contact</a>
+                  </li>
+                  <li class="tel">
+                    <a href="tel:+2348145995586">+ (234)814-599-5586</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="side-ber">
+              <button class="sidebar-btn">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--/Header Area-->
 
-<!-- CSS -->
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="public/assets/front/css/bootstrap.min.css">
-<!-- Jquery ui CSS -->
-<link rel="stylesheet" href="public/assets/front/css/jquery-ui.css">
-<!-- Fancybox CSS -->
-<link rel="stylesheet" href="public/assets/front/css/jquery.fancybox.min.css">
+  <!-- Right Side Panel -->
+  <div class="side-panel hide">
+    <div class="sp-box">
+      <div class="sp-close">
+        <span class="close-sp">
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="sp-logo">
+        <router-link to="/">
+          <img src="public/assets/img/logo-2.png" alt />
+        </router-link>
+      </div>
 
-<!-- Font Awesome CSS -->
-<link rel="stylesheet" href="public/assets/front/css/font-awosome.css">
-
-<!-- Flaticon CSS -->
-<link rel="stylesheet" href="public/assets/front/flat-font/flaticon.css">
-<!-- Ticker css-->
-<link rel="stylesheet" href="public/assets/front/css/ticker.min.css">
-<!--Owl carousel Slider -->
-<link rel="stylesheet" href="public/assets/front/css/owl.carousel.min.css">
-<link rel="stylesheet" href="public/assets/front/css/owl.theme.default.min.css">
-<!-- Nav Menu CSS -->
-<link rel="stylesheet" href="public/assets/front/css/sm-core-css.css">
-<link rel="stylesheet" href="public/assets/front/css/sm-mint.css">
-<link rel="stylesheet" href="public/assets/front/css/sm-style.css">
-<!-- Animate CSS -->
-<link rel="stylesheet" href="public/assets/front/css/aos.css">
-<link rel="stylesheet" href="public/assets/front/css/animate.min.css">
-
-<!-- Revulation Slider -->
-<link rel="stylesheet" href="public/assets/front/sliders/slider-1/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-<link rel="stylesheet" href="public/assets/front/sliders/slider-1/fonts/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="public/assets/front/sliders/slider-1/css/rs6.css">
-<!-- Main StyleSheet CSS -->
-<link rel="stylesheet" href="public/assets/front/css/style.css">
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="public/assets/front/img/favicon.png">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
-
-
- {{-- vue styles--}}
- <link href="{{ asset('public/css/front_app.css') }}" rel="stylesheet">
-
-
- <!-- CSRF Token -->
- <meta name="csrf-token" content="{{ csrf_token() }}">
-
+      <div class="sp-contact">
+        <h4>Contact</h4>
+        <div class="spc-text">
+          <p>Suite 20, 2nd floor, Olowu Shopping Complex, 70 Airport Rd, Oka, Benin City</p>
+          <h5>Phone:</h5>
+          <p>
+            <a href="tel:+2348145995586">+ (234)814-599-5586</a>
+          </p>
+          <h5>Email:</h5>
+          <p>
+            <a href="mailto:info@myempirehomes.com">info@myempirehomes.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="sp-social">
+        <ul class="social-list">
+          <li data-aos="fade-up" data-aos-duration="1500">
+            <a href="https://twitter.com/myempirehome">
+              <i class="flaticon-twitter"></i>
+            </a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="2000">
+            <a href="https://web.facebook.com/myempirehome">
+              <i class="flaticon-facebook"></i>
+            </a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="2500">
+            <a href="https://www.instagram.com/myempirehome">
+              <i class="flaticon-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /Right Side Panel -->

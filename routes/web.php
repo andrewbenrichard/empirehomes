@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/{path}', 'MainController@index')->name('home')->where('path', '.*');
+Route::get('/', 'MainController@index')->name('home');
+Route::get('/about-us', 'MainController@about');
+Route::get('/services', 'MainController@services');
+Route::get('/projects', 'MainController@projects');
+Route::get('/contact-us', 'MainController@contact');
 
 Auth::routes();
 

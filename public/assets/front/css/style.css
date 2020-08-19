@@ -2350,7 +2350,11 @@ section.footer-details .footer-information {
 section.footer-details .footer-information .single-info {
     position: relative;
     max-width: 230px;
-    margin-left: 130px;
+    margin-left: 114px;
+    margin-top: 19px;
+}
+a.footer-link {
+    color: #333333;
 }
 section.footer-details .footer-information .single-info:first-child {
     margin-left: 0;

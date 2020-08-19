@@ -10,10 +10,36 @@ class MainController extends Controller
   
     public function index()
     {
-        return view('home');
+        $title = "Home";
+        return view('home')->with('title', $title);
     }
-    public function dashboard()
+  
+    public function about()
     {
-        return view('layouts.dash_master');
+        
+        $title = "About Us";
+        return view('about')->with('title', $title);
     }
+  
+    public function services()
+    {
+        
+        $title = "Our Services";
+        return view('services')->with('title', $title);
+    }
+  
+    public function projects()
+    {
+        
+        $title = "Projects";
+        return view('projects')->with('title', $title);
+    }
+  
+    public function contact()
+    {
+        
+        $title = "Contact Us";
+        return view('contact')->with('title', $title);
+    }
+    
 }

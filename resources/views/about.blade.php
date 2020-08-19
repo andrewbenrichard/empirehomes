@@ -28,13 +28,13 @@
         <div class="col-md-6">
           <div class="hero-inner-img">
             <img
-              src="/assets/front/img/about/about.jpg"
+              src="public/assets/front/img/about/about.jpg"
               alt
               data-aos="fade-left"
               data-aos-duration="2000"
             />
             <img
-              src="/assets/front/img/about/about2.jpg"
+              src="public/assets/front/img/about/about2.jpg"
               alt
               class="hero-inner-2"
               data-aos="fade-up"
@@ -53,7 +53,7 @@
         <div class="col-md-6">
           <div class="hero-inner-img">
             <img
-              src="/assets/front/img/about/about3.jpg"
+              src="public/assets/front/img/about/about3.jpg"
               alt
               data-aos="fade-left"
               data-aos-duration="2000"

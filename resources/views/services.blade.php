@@ -27,13 +27,13 @@
       <div class="col-md-6">
         <div class="hero-inner-img">
           <img
-            src="/assets/front/img/hero/service-hero.jpg"
+            src="public/assets/front/img/hero/service-hero.jpg"
             alt
             data-aos="fade-left"
             data-aos-duration="2000"
           />
           <img
-            src="/assets/front/img/hero/service-hero2.jpg"
+            src="public/assets/front/img/hero/service-hero2.jpg"
             alt
             class="hero-inner-2"
             data-aos="fade-up"
@@ -50,8 +50,8 @@
     <div class="row">
       <div class="col-md-4">
         <div class="portfolio-img" data-aos="fade-up" data-aos-duration="1500">
-          <a data-fancybox="gallery" href="/assets/front/img/portfolio/portfolio1.jpg">
-            <img src="/assets/front/img/portfolio/portfolio2.jpg" alt />
+          <a data-fancybox="gallery" href="public/assets/front/img/portfolio/portfolio1.jpg">
+            <img src="public/assets/front/img/portfolio/portfolio2.jpg" alt />
             <i class="flaticon-add rp-icon"></i>
           </a>
           <div class="sp-text">
@@ -63,7 +63,7 @@
       <div class="col-md-4">
         <div class="portfolio-img" data-aos="fade-up" data-aos-duration="2500">
           <a data-fancybox="gallery" href="handymen.myempirehomes.com">
-            <img src="/assets/front/img/portfolio/handymen.jpg" alt />
+            <img src="public/assets/front/img/portfolio/handymen.jpg" alt />
             <i class="flaticon-add rp-icon"></i>
           </a>
           <div class="sp-text">
@@ -75,7 +75,7 @@
       <div class="col-md-4">
         <div class="portfolio-img" data-aos="fade-up" data-aos-duration="3000">
           <a data-fancybox="gallery" href="listings.myempirehomes.com">
-            <img src="/assets/front/img/portfolio/listing.jpg" alt />
+            <img src="public/assets/front/img/portfolio/listing.jpg" alt />
             <i class="flaticon-add rp-icon"></i>
           </a>
           <div class="sp-text">

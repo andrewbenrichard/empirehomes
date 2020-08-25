@@ -17,9 +17,9 @@
             <li data-aos="fade-up" data-aos-duration="1700">Architectural Design</li>
             <li data-aos="fade-up" data-aos-duration="1800">Real Estate Construction</li>
             <li data-aos="fade-up" data-aos-duration="2100">Interior & Exterior Design</li>
-            <li data-aos="fade-up" data-aos-duration="2500">Home & office maintenance service</li>
+            <li data-aos="fade-up" data-aos-duration="2500"><a href="https://handymen.myempirehomes.com"> Home & office maintenance service </a> </li>
             <li data-aos="fade-up" data-aos-duration="2800">Renovation</li>
-            <li data-aos="fade-up" data-aos-duration="3000">Property online Listing</li>
+            <li data-aos="fade-up" data-aos-duration="3000"><a href="https://listings.myempirehomes.com"> Property online Listing</a></li>
           </ul>
           
         </div>
@@ -62,7 +62,7 @@
       </div>
       <div class="col-md-4">
         <div class="portfolio-img" data-aos="fade-up" data-aos-duration="2500">
-          <a data-fancybox="gallery" href="handymen.myempirehomes.com">
+          <a data-fancybox="gallery" href="https://handymen.myempirehomes.com">
             <img src="public/assets/front/img/portfolio/handymen.jpg" alt />
             <i class="flaticon-add rp-icon"></i>
           </a>
@@ -74,7 +74,7 @@
       </div>
       <div class="col-md-4">
         <div class="portfolio-img" data-aos="fade-up" data-aos-duration="3000">
-          <a data-fancybox="gallery" href="listings.myempirehomes.com">
+          <a data-fancybox="gallery" href="https://listings.myempirehomes.com">
             <img src="public/assets/front/img/portfolio/listing.jpg" alt />
             <i class="flaticon-add rp-icon"></i>
           </a>

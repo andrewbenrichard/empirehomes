@@ -52,7 +52,7 @@
  <!-- CSRF Token -->
  <meta name="csrf-token" content="{{ csrf_token() }}">
 
-
+<script data-ad-client="ca-pub-4756415783115498" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
    
 </head>

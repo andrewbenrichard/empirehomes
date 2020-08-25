@@ -88,7 +88,7 @@
                 <a
                   id="slider-22-slide-33-layer-4"
                   class="rs-layer hero-btn rev-btn"
-                  href="handymen.myempirehomes.com"
+                  href="https://handymen.myempirehomes.com"
                   target="_self"
                   rel="nofollow"
                   data-type="button"
